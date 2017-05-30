@@ -7,6 +7,23 @@ body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+#main-title {
+font-size: 50px;
+}
+#mainNav {
+  background-color:#484a4c;
+  opacity: 0.9;
+}
+.intro-description {
+  margin-bottom: 30px;
+  font-size: 25px;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+}
+.nav-btns{
+  font-size: large;
+  font-weight: bold;
+}
 .text-muted {
   color: #777777;
 }
@@ -743,4 +760,14 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #fed136;
+}
+
+/*********shop template*************/
+
+.main-carousel {
+  margin-top: 130px;
+}
+
+.list-categories {
+margin-top: 130px;
 }
