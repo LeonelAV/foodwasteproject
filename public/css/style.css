@@ -2,6 +2,31 @@ body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
+.details-modal > h1, p {
+  display: flex;
+  justify-content: center;
+  line-height: 85px;
+}
+
+.details-modal > img {
+  width: 100%;
+}
+
+.details-modal > p {
+  font-size: 20px;
+}
+
+.details-modal > a{
+
+display: flex;
+ justify-content: center;
+ font-size: 30px;
+}
+
+#last-img {
+  display: inline-block;
+}
+
 #main-title {
   font-size: 50px; }
 
@@ -740,7 +765,7 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #fed136; }
 
-/*********shop template*************/
+/*********products.html*************/
 .main-carousel {
   margin-top: 130px;
 }
@@ -755,6 +780,9 @@ body {
 .list-products {
   margin-top: 25px;
 }
+.products:hover {
+    background-color: yellow;
+}
 
 .discount {
   width: 20%;
@@ -767,6 +795,104 @@ body {
   border-radius: 100%;
 }
 
-.list-products {
+/*.list-products {
   cursor: pointer;
+}*/
+
+
+/************* shops.html **************/
+
+.shop-name {
+  margin-top: 100px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column-reverse;
+  background-color: rgba(254, 202, 28, 0.9)
+}
+
+.shop-name > p{
+  font-size: 30px;
+}
+
+.list-products-shop {
+  margin-top: 50px;
+}
+
+/************** log in *************/
+
+@media (min-width: 768px) {
+    .omb_row-sm-offset-3 div:first-child[class*="col-"] {
+        margin-left: 25%;
+    }
+}
+
+.omb_login .omb_authTitle {
+    text-align: center;
+  line-height: 300%;
+}
+  
+.omb_login .omb_socialButtons a {
+  color: white; // In yourUse @body-bg 
+  opacity:0.9;
+}
+.omb_login .omb_socialButtons a:hover {
+    color: white;
+  opacity:1;      
+}
+.omb_login .omb_socialButtons .omb_btn-facebook {background: #3b5998;}
+.omb_login .omb_socialButtons .omb_btn-twitter {background: #00aced;}
+.omb_login .omb_socialButtons .omb_btn-google {background: #c32f10;}
+
+
+.omb_login .omb_loginOr {
+  position: relative;
+  font-size: 1.5em;
+  color: #aaa;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+.omb_login .omb_loginOr .omb_hrOr {
+  background-color: #cdcdcd;
+  height: 1px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+.omb_login .omb_loginOr .omb_spanOr {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -0.6em;
+  margin-left: -1.5em;
+  background-color: white;
+  width: 3em;
+  text-align: center;
+}     
+
+.omb_login .omb_loginForm .input-group.i {
+  width: 2em;
+}
+.omb_login .omb_loginForm  .help-block {
+    color: red;
+}
+
+  
+@media (min-width: 768px) {
+    .omb_login .omb_forgotPwd {
+        text-align: right;
+    margin-top:10px;
+  }   
+}
+
+#login-btn {
+  background-color: #3B5998;
+  border-color: #3B5998;
+}
+
+.omb_login {
+  margin-top: 35px;
+  margin-bottom: 60px;
 }
