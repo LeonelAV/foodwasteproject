@@ -780,12 +780,37 @@ body {
 .list-products {
   margin-top: 25px;
 }
-.products:hover {
-    background-color: yellow;
+.products {
+   box-shadow:0 3px 10px;
 }
 
+.list-group {
+  margin-bottom: 50px;
+}
+
+.products:hover {
+  -webkit-transform:scale(1.06);
+  -moz-transform:scale(1.06);
+  -ms-transform:scale(1.06);
+  -o-transform:scale(1.06);
+  transform:scale(1.06);
+}
+
+select {
+  width: 100%;
+  background-color: white;
+  border: thin solid #DDDDDD;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+
+}
+
+
 .discount {
-  width: 20%;
+  width: 10%;
   margin-right: 10px;
 }
 

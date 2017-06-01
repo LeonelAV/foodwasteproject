@@ -20,25 +20,6 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
-<!-- <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Shop Homepage - Start Bootstrap Template</title>
-    -Bootstrap Core CSS -->
-    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
-    <!-- Custom CSS -->
-    <!-- <link href="css/shop-homepage.css" rel="stylesheet"> -->
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-
 <body>
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -82,6 +63,14 @@
                     <a href="#" class="list-group-item">Bakery</a>
                     <a href="#" class="list-group-item">Butchery</a>
                 </div>
+                <p class="lead">Distance</p>
+                <select class="distance-select">
+                    <option>+ 1 km</option>
+                    <option>+ 2 km</option>
+                    <option>+ 3 km</option>
+                    <option>+ 5 km</option>
+                    <option>+ 10 km</option>
+                </select>
             </div>
             <div class="col-md-9">
                 <div class="main-carousel row carousel-holder">
@@ -113,24 +102,16 @@
                     </div>
                 </div>
                 <div class="row list-products">
-                    <div class="col-sm-4 col-lg-4 col-md-4 products" data-toggle="modal" data-target=".bd-example-modal-lg">
-                        <div class="thumbnail">
+                    <div class="col-sm-4 col-lg-4 col-md-4" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">
+                        <div class="thumbnail products">
                           <img class="discount" src="img/discount.png"></img>
                             <img src="img/boqueron-fresco.jpg" alt="">
-                            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content details-modal">
-                                        <h1>Frutas y Verduras León</h1>
-                                        <p>Rambla de la Marina, 206, 08907 Hospitalet de Llobregat (L'), Barcelona <hr><a target="_blank" href="shops.html"> See all products of this shop</a></p>
-                                        <img src="img/mapa.png">
-                                    </div>
-                                </div>
-                            </div>
                             <div class="caption">
                                 <h4 class="pull-right">$24.99</h4>
-                                <h4><a href="#">Fresh fish</a>
+                                <h4><a>Fresh fish</a>
                                 </h4>
-                                <p>Fecha de caducidad: 04/06/2017 <a target="_blank" href="http://www.bootsnipp.com">Pescados Sepal SL</a>.</p>
+                                <p>Fecha de caducidad: 04/06/2017</p>
+                                <h5>Pescados Sepal S.L.</h5>
                             </div>
                             <div class="distance">
                                 <p>Distance: 600m</p>
@@ -138,108 +119,89 @@
                         </div>
                     </div>
                     <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="img/pollo-asado.jpg" alt="">
-                            <div class="caption">
-                                <h4 class="pull-right">$64.99</h4>
-                                <h4><a href="#">Grilled-chicken</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="ratings">
-                                <p class="pull-right">12 reviews</p>
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail products">
                             <img src="img/ensalada.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$74.99</h4>
-                                <h4><a href="#">Salad</a>
+                                <h4 class="pull-right">$24.99</h4>
+                                <h4><a>Fresh fish</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>Fecha de caducidad: 04/06/2017</p>
+                                <h5>Pescados Sepal S.L.</h5>
                             </div>
-                            <div class="ratings">
-                                <p class="pull-right">31 reviews</p>
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </p>
+                            <div class="distance">
+                                <p>Distance: 600m</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail products">
                             <img src="img/pan-barra.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$84.99</h4>
-                                <h4><a href="#">Bread</a>
+                                <h4 class="pull-right">$24.99</h4>
+                                <h4><a>Fresh fish</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>Fecha de caducidad: 04/06/2017</p>
+                                <h5>Pescados Sepal S.L.</h5>
                             </div>
-                            <div class="ratings">
-                                <p class="pull-right">6 reviews</p>
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </p>
+                            <div class="distance">
+                                <p>Distance: 600m</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail products">
                             <img src="img/croissants.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$94.99</h4>
-                                <h4><a href="#">Croissants</a>
+                                <h4 class="pull-right">$24.99</h4>
+                                <h4><a>Fresh fish</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>Fecha de caducidad: 04/06/2017</p>
+                                <h5>Pescados Sepal S.L.</h5>
                             </div>
-                            <div class="ratings">
-                                <p class="pull-right">18 reviews</p>
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </p>
+                            <div class="distance">
+                                <p>Distance: 600m</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail products">
                             <img src="img/carrots.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$94.99</h4>
-                                <h4><a href="#">Carrots</a>
+                                <h4 class="pull-right">$24.99</h4>
+                                <h4><a>Fresh fish</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>Fecha de caducidad: 04/06/2017</p>
+                                <h5>Pescados Sepal S.L.</h5>
                             </div>
-                            <div class="ratings">
-                                <p class="pull-right">18 reviews</p>
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </p>
+                            <div class="distance">
+                                <p>Distance: 600m</p>
                             </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail products" data-toggle="#modal">
+                            <img src="img/pollo-asado.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$24.99</h4>
+                                <h4><a>Fresh fish</a>
+                                </h4>
+                                <p>Fecha de caducidad: 04/06/2017</p>
+                                <h5>Pescados Sepal S.L.</h5>
+                            </div>
+                            <div class="distance">
+                                <p>Distance: 600m</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Modal content  -->
+                <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content details-modal">
+                            <h1>Frutas y Verduras León</h1>
+                            <p>Rambla de la Marina, 206, 08907 Hospitalet de Llobregat (L'), Barcelona
+                                <hr><a target="_blank" href="shops.html"> See all products</a></p>
+                            <img src="img/mapa.png">
                         </div>
                     </div>
                 </div>
