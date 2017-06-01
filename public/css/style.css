@@ -2,6 +2,18 @@ body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
+#main-title:hover {
+  background-color: $primary-hover;
+  letter-spacing: 2px;
+  transition: all 0.5s ease 0s;
+}
+
+
+.discription p {
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
 .details-modal > h1, p {
   display: flex;
   justify-content: center;
@@ -766,19 +778,14 @@ body {
   webkit-tap-highlight-color: #fed136; }
 
 /*********products.html*************/
-.main-carousel {
-  margin-top: 130px;
-}
 
 .list-categories {
   margin-top: 130px; }
 
-.carousel-inner {
-  height: 310px;
-}
+
 
 .list-products {
-  margin-top: 25px;
+  margin-top: 62px;
 }
 .products {
    box-shadow:0 3px 10px;
@@ -823,6 +830,21 @@ select {
 .list-products {
   cursor: pointer;
 }
+
+.result-input {
+  font-size: 30px;
+  margin-top: 121px;
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+.lead1 {
+  margin-top: 42px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
 
 
 /************* shops.html **************/
@@ -921,3 +943,8 @@ select {
   margin-top: 35px;
   margin-bottom: 60px;
 }
+
+#login-section {
+  margin-top: 80px;
+}
+

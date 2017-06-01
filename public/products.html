@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 
 <head>
     <meta charset="utf-8">
@@ -56,14 +56,20 @@
     <div class="container">
         <div class="row">
             <div class="list-categories col-md-3">
-                <p class="lead">Category</p>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for..." ng-model="sometext">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Search</button>
+                  </span>
+              </div>
+                <p class="lead1">Category</p>
                 <div class="list-group">
                     <a href="#" class="list-group-item">Supermaket</a>
                     <a href="#" class="list-group-item">Fish Shops</a>
                     <a href="#" class="list-group-item">Bakery</a>
                     <a href="#" class="list-group-item">Butchery</a>
                 </div>
-                <p class="lead">Distance</p>
+                <p class="lead1">Distance</p>
                 <select class="distance-select">
                     <option>+ 1 km</option>
                     <option>+ 2 km</option>
@@ -73,7 +79,7 @@
                 </select>
             </div>
             <div class="col-md-9">
-                <div class="main-carousel row carousel-holder">
+                <!-- <div class="main-carousel row carousel-holder">
                     <div class="col-md-12">
                         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators">
@@ -100,7 +106,8 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
+                <p class="result-input">Searching for: {{sometext}}</p>
                 <div class="row list-products">
                     <div class="col-sm-4 col-lg-4 col-md-4" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">
                         <div class="thumbnail products">
@@ -110,7 +117,7 @@
                                 <h4 class="pull-right">$24.99</h4>
                                 <h4><a>Fresh fish</a>
                                 </h4>
-                                <p>Fecha de caducidad: 04/06/2017</p>
+                                <p>Date of Expiry: 04/06/2017</p>
                                 <h5>Pescados Sepal S.L.</h5>
                             </div>
                             <div class="distance">
@@ -123,9 +130,9 @@
                             <img src="img/ensalada.jpg" alt="">
                             <div class="caption">
                                 <h4 class="pull-right">$24.99</h4>
-                                <h4><a>Fresh fish</a>
+                                <h4><a>Fresh salad</a>
                                 </h4>
-                                <p>Fecha de caducidad: 04/06/2017</p>
+                                <p>Date of Expiry: 04/06/2017</p>
                                 <h5>Pescados Sepal S.L.</h5>
                             </div>
                             <div class="distance">
@@ -138,9 +145,9 @@
                             <img src="img/pan-barra.jpg" alt="">
                             <div class="caption">
                                 <h4 class="pull-right">$24.99</h4>
-                                <h4><a>Fresh fish</a>
+                                <h4><a>Bread</a>
                                 </h4>
-                                <p>Fecha de caducidad: 04/06/2017</p>
+                                <p>Date of Expiry: 04/06/2017</p>
                                 <h5>Pescados Sepal S.L.</h5>
                             </div>
                             <div class="distance">
@@ -153,9 +160,9 @@
                             <img src="img/croissants.jpg" alt="">
                             <div class="caption">
                                 <h4 class="pull-right">$24.99</h4>
-                                <h4><a>Fresh fish</a>
+                                <h4><a>Croissants</a>
                                 </h4>
-                                <p>Fecha de caducidad: 04/06/2017</p>
+                                <p>Date of Expiry: 04/06/2017</p>
                                 <h5>Pescados Sepal S.L.</h5>
                             </div>
                             <div class="distance">
@@ -168,9 +175,9 @@
                             <img src="img/carrots.jpg" alt="">
                             <div class="caption">
                                 <h4 class="pull-right">$24.99</h4>
-                                <h4><a>Fresh fish</a>
+                                <h4><a>Carrots</a>
                                 </h4>
-                                <p>Fecha de caducidad: 04/06/2017</p>
+                                <p>Date of Expiry: 04/06/2017</p>
                                 <h5>Pescados Sepal S.L.</h5>
                             </div>
                             <div class="distance">
@@ -183,9 +190,9 @@
                             <img src="img/pollo-asado.jpg" alt="">
                             <div class="caption">
                                 <h4 class="pull-right">$24.99</h4>
-                                <h4><a>Fresh fish</a>
+                                <h4><a>Roasted Chicken</a>
                                 </h4>
-                                <p>Fecha de caducidad: 04/06/2017</p>
+                                <p>Date of Expiry: 04/06/2017</p>
                                 <h5>Pescados Sepal S.L.</h5>
                             </div>
                             <div class="distance">
@@ -198,7 +205,7 @@
                 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                     <div class="modal-dialog modal-lg" role="document">
                         <div class="modal-content details-modal">
-                            <h1>Frutas y Verduras León</h1>
+                            <h1>Pescados Sepal S.L</h1>
                             <p>Rambla de la Marina, 206, 08907 Hospitalet de Llobregat (L'), Barcelona
                                 <hr><a target="_blank" href="shops.html"> See all products</a></p>
                             <img src="img/mapa.png">
@@ -220,6 +227,7 @@
             </div>
         </footer>
     </div>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
