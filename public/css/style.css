@@ -2,6 +2,8 @@ body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
+/*************** *******************/ 
+
 #main-title:hover {
   background-color: $primary-hover;
   letter-spacing: 2px;
@@ -45,6 +47,8 @@ display: flex;
 #mainNav {
   background-color: #484a4c;
   opacity: 0.9; }
+
+  /************* **** ***** **********/
 
 .intro-description {
   margin-bottom: 30px;
@@ -788,8 +792,24 @@ body {
   margin-top: 62px;
 }
 .products {
-   box-shadow:0 3px 10px;
+  box-shadow:0 3px 10px;
+ /* width: 220px;
+  height: 340px;*/
 }
+
+@media (min-width: 692px) {
+.products {
+  width: 100%;
+  height: 600px;
+}
+
+
+@media (min-width: 892px) {
+.products {
+  width: 100%;
+  height: 450px;
+}
+
 
 .list-group {
   margin-bottom: 50px;
@@ -817,8 +837,9 @@ select {
 
 
 .discount {
-  width: 10%;
   margin-right: 10px;
+  width: 70%;
+  float: left;
 }
 
 .fish-shop {
@@ -845,7 +866,10 @@ select {
   margin-bottom: 20px;
 }
 
-
+/*.caption > p {
+  margin-right: 10px;
+}
+*/
 
 /************* shops.html **************/
 
