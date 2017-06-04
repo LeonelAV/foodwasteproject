@@ -24,12 +24,49 @@
 </head>
 
 <body id="page-top" class="index">
+<div class="container">
+	<div class="row">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">Upload a product</div>
+                <div class="panel-body">
+                    <form role="form" id="registForm">
+                        <input type="hidden" name="contentCount" value="1" />
+                        <div class="form-group">
+                            <label for="input-code">Product Name</label>
+                            <input type="text" class="form-control" id="input-code">
+                        </div>
+                        <div class="row form-group">
+                          <div class="col-md-6"
+                            <label for="content-1">Price</label>
+                            <div class="input-group" id="input-group-1">
+                                <input type="text" class="form-control" id="content-1">
+                            </div><!-- /input-group -->
+                            </div>
+                            <div class="col-md-6"
+                            <label for="content-1">Discount</label>
+                            <div class="input-group" id="input-group-1">
+                                <input type="text" class="form-control" id="content-1">
+                            </div><!-- /input-group -->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-StartDate-1">Date of Expery</label>
+                            <input type="date" class="form-control" id="input-StartDate-1" placeholder="시작일">
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                            <label for="exampleInputFile">Image of the product</label>
+                            <input type="file" id="exampleInputFile">
+                            <p class="help-block">.jpg, .gif, .png</p>
+                        </div>
+                        
 
-  <div ng-include src="'templates/includes/header.html'"></div>
-  <ng-view></ng-view>
-  <div ng-include src="'templates/includes/footer.html'"></div>
-
-    <!--  Angular -->
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div><!-- END panel-body -->
+<!--  Angular -->
     <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
 

@@ -962,4 +962,11 @@ select {
 #login-section {
   margin-top: 80px; }
 
+/************ Login - register **********/
+
+#login-register {
+  background-color: green;
+}
+
+
 /*# sourceMappingURL=main.css.map */
