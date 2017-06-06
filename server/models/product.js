@@ -10,13 +10,9 @@ const ProductSchema = new mongoose.Schema({
   discount: Number,
   experyAt: Number,
   shop: {
-    Name: String,
+    name: String,
     address: String,
-    location: {
-      coordinates: {
-        Latitude: Number,
-        Longitude: Number
-      }
+    coordinates: [ Number, Number ],
     }
   },
   expired: {
