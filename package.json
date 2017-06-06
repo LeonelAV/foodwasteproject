@@ -10,8 +10,8 @@
     "build:scss:watch": "node-sass src/scss/main.scss public/css/main.css --watch",
     "prestart": "npm install",
     "postinstall": "bower install",
-    "start": "node server/app",
-    "dev": "supervisor server/app"
+    "start": "node index",
+    "dev": "supervisor index"
   },
   "author": "",
   "license": "ISC",
