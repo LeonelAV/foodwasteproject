@@ -12,8 +12,7 @@ const ProductSchema = new mongoose.Schema({
   shop: {
     name: String,
     address: String,
-    coordinates: [ Number, Number ],
-    }
+    coordinates: [ Number, Number ]
   },
   expired: {
     type: Boolean,
