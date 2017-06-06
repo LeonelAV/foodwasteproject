@@ -4,12 +4,6 @@ const bodyParser = require('body-parser')
 
 const app = express()
 
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config()
-}
-
-const PORT = process.env.PORT
-
 const routesProducts = require('./routes/products')
 const routesProduct = require('./routes/product')
 

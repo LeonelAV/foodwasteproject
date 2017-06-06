@@ -1,11 +1,11 @@
 angular.module('zeroWasteApp')
-  .controller('homeController', function ($scope, $location) {
+  .controller('homeController', function ($scope, $location, ApiService) {
     $scope.title = 'HOME'
 
     $scope.getProducts = function () {
-      // var codeLocation = $scope.queryLocation.split(':')[0]
       $location.path('/products/')
     }
+
 
   })
   
