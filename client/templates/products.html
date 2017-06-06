@@ -26,21 +26,25 @@
         <div class="col-md-9">
             <p class="result-input">Searching for: {{sometext}}</p>
             <div class="row list-products">
-                <div class="col-sm-6  col-md-4 setborder" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">
-                    <div class="thumbnail products">
-                        <img class="discount" src="img/discount50.jpeg"></img>
-                        <img class="product-img" src="img/boqueron-fresco.jpg" alt="">
-                        <div class="caption">
-                            <h4 class="pull-right">12,49€</h4>
-                            <h4 class="price-review">24.99€</h4>
-                            <h3>Fresh Fish</h3>
-                            <p>Expiry at: 04/06/2017</p>
-                            <h5>Distance: 600m</h5>
-                            <p>Pescados Sepal S.L.</p>
+                <ul class="list-unstyled list-pizzas">
+                    <li ng-repeat="product in products">
+                        <div class="col-sm-6  col-md-4 setborder" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">
+                            <div class="thumbnail products">
+                                <img class="discount" src="img/discount50.jpeg"></img>
+                                <img class="product-img" src="img/boqueron-fresco.jpg" alt="">
+                                <div class="caption">
+                                    <h4 class="pull-right">{{ product.price/(100/product.discount)}}€</h4>
+                                    <h4 class="price-review">{{product.price}}€</h4>
+                                    <h3> {{ product.name }}</h3>
+                                    <p>{{ product.experyAt}}</p>
+                                    <h5>Distance: 600m</h5>
+                                    <p>Pescados Sepal S.L.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
+                    </li>
+                </ul>
+                <!--                <div class="col-sm-6 col-md-4">
                     <div class="thumbnail products">
                         <img class="discount" src="img/discount50.jpeg"></img>
                         <img class="product-img" src="img/ensalada.jpg" alt="">
@@ -109,7 +113,7 @@
                             <p>Pescados Sepal S.L.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <!--Modal content  -->
             <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">

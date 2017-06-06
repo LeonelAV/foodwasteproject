@@ -6,9 +6,10 @@ const ProductSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  image: String,
   price: Number,
   discount: Number,
-  experyAt: Number,
+  experyAt: String,
   shop: {
     name: String,
     address: String,
