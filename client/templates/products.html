@@ -28,7 +28,7 @@
             <div class="row list-products">
                 <ul class="list-unstyled list-pizzas">
                     <li ng-repeat="product in products">
-                        <div class="col-sm-6  col-md-4 setborder" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">
+                        <div class="col-sm-6  col-md-4 setborder" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProduct_{{product._id}}">
                             <div class="thumbnail products">
                                 <img class="discount" src="img/discount50.jpeg"></img>
                                 <img class="product-img" src="{{ product.image }}" alt="">
@@ -36,26 +36,27 @@
                                     <h4 class="pull-right">{{ product.price/(100/product.discount)}}€</h4>
                                     <h4 class="price-review">{{product.price}}€</h4>
                                     <h3> {{ product.name }}</h3>
-                                    <p>{{ product.experyAt}}</p>
+                                    <p>Expery at: {{ product.experyAt}}</p>
                                        <h5>Distance: 600m</h5>
                                     <p>{{ product.shop }}</p>
                                 </div>
                             </div>
                         </div>
-                    </li>
-                </ul>
-            </div>
-            <!--Modal content  -->
-            <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                        <div class="modal fade bs-example-modal-lg" id="modalProduct_{{product._id}}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content details-modal">
-                        <h1>{{ product.shop }}</h1>
-                        <p>{{ product.address }}</p>
+                        <h1 >{{ product.shop }}</h1>
+                        <p>{{ product.name }}</p>
                         <a ng-click="getShop()" type="submit" data-dismiss="modal" class="page-scroll btn btn-xl"> See all products</a>
                         <img src="img/mapa.png">
                     </div>
                 </div>
             </div>
+                    </li>
+                </ul>
+            </div>
+            <!--Modal content  -->
+            
         </div>
     </div>
 </div>
