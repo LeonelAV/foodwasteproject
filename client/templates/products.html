@@ -31,96 +31,26 @@
                         <div class="col-sm-6  col-md-4 setborder" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">
                             <div class="thumbnail products">
                                 <img class="discount" src="img/discount50.jpeg"></img>
-                                <img class="product-img" src="img/boqueron-fresco.jpg" alt="">
+                                <img class="product-img" src="{{ product.image }}" alt="">
                                 <div class="caption">
                                     <h4 class="pull-right">{{ product.price/(100/product.discount)}}€</h4>
                                     <h4 class="price-review">{{product.price}}€</h4>
                                     <h3> {{ product.name }}</h3>
                                     <p>{{ product.experyAt}}</p>
-                                    <h5>Distance: 600m</h5>
-                                    <p>Pescados Sepal S.L.</p>
+                                       <h5>Distance: 600m</h5>
+                                    <p>{{ product.shop }}</p>
                                 </div>
                             </div>
                         </div>
                     </li>
                 </ul>
-                <!--                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail products">
-                        <img class="discount" src="img/discount50.jpeg"></img>
-                        <img class="product-img" src="img/ensalada.jpg" alt="">
-                        <div class="caption">
-                            <h4 class="pull-right">12,49€</h4>
-                            <h4 class="price-review">24.99€</h4>
-                            <h3>Fresh Salad</h3>
-                            <p>Expiry at: 04/06/2017</p>
-                            <h5>Distance: 600m</h5>
-                            <p>Pescados Sepal S.L.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail products">
-                        <img class="discount" src="img/discount50.jpeg"></img>
-                        <img class="product-img" src="img/pan-barra.jpg" alt="">
-                        <div class="caption">
-                            <h4 class="pull-right">12,49€</h4>
-                            <h4 class="price-review">24.99€</h4>
-                            <h3>Bread</h3>
-                            <p>Expiry at: 04/06/2017</p>
-                            <h5>Distance: 600m</h5>
-                            <p>Pescados Sepal S.L.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail products">
-                        <img class="discount" src="img/discount50.jpeg"></img>
-                        <img class="product-img" src="img/croissants.jpg" alt="">
-                        <div class="caption">
-                            <h4 class="pull-right">12,49€</h4>
-                            <h4 class="price-review">24.99€</h4>
-                            <h3>Croissants</h3>
-                            <p>Expiry at: 04/06/2017</p>
-                            <h5>Distance: 600m</h5>
-                            <p>Pescados Sepal S.L.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail products">
-                        <img class="discount" src="img/discount50.jpeg"></img>
-                        <img class="product-img" src="img/carrots.jpg" alt="">
-                        <div class="caption">
-                            <h4 class="pull-right">12,49€</h4>
-                            <h4 class="price-review">24.99€</h4>
-                            <h3>Carrots</h3>
-                            <p>Expiry at: 04/06/2017</p>
-                            <h5>Distance: 600m</h5>
-                            <p>Pescados Sepal S.L.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail products" data-toggle="#modal">
-                        <img class="discount" src="img/discount50.jpeg"></img>
-                        <img class="product-img" src="img/pollo-asado.jpg" alt="">
-                        <div class="caption">
-                            <h4 class="pull-right">12,49€</h4>
-                            <h4 class="price-review">24.99€</h4>
-                            <h3>Roasted Chicken</h3>
-                            <p>Expiry at: 04/06/2017</p>
-                            <h5>Distance: 600m</h5>
-                            <p>Pescados Sepal S.L.</p>
-                        </div>
-                    </div>
-                </div> -->
             </div>
             <!--Modal content  -->
             <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content details-modal">
-                        <h1>Pescados Sepal S.L</h1>
-                        <p>Rambla de la Marina, 206, 08907 Hospitalet de Llobregat (L'), Barcelona</p>
+                        <h1>{{ product.shop }}</h1>
+                        <p>{{ product.address }}</p>
                         <a ng-click="getShop()" type="submit" data-dismiss="modal" class="page-scroll btn btn-xl"> See all products</a>
                         <img src="img/mapa.png">
                     </div>

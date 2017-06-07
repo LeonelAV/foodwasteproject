@@ -7,7 +7,14 @@ angular.module('zeroWasteApp')
         return response.data
       })
   }
+  var uploadProducts = function(data) {
+    return $http.post('/api/products', data)
+      .then(function(response){
+        return response.data
+      })
+  }
   return {
-    getProducts: getProducts
+    getProducts: getProducts,
+    uploadProducts: uploadProducts
   }
 })

@@ -3,18 +3,15 @@ const collection = 'products'
 
 const ProductSchema = new mongoose.Schema({
   name: {
-    type: String,
-    required: true
+    type: String
   },
   image: String,
   price: Number,
   discount: Number,
   experyAt: String,
-  shop: {
-    name: String,
-    address: String,
-    coordinates: [ Number, Number ]
-  },
+  shop: String,
+  address: String,
+  coordinates: [ Number, Number ],
   expired: {
     type: Boolean,
     default: false

@@ -10,11 +10,15 @@ angular.module('zeroWasteApp')
         controller: 'productsController'
       })
       .when('/shops', {
-        templateUrl: 'templates/shops.html',
+        templateUrl: 'templates/shops.html'
         // controller: 'productsController'
       })
       .when('/login', {
         templateUrl: 'templates/login.html',
-        controller:'headerControlller'
+        controller: 'headerControlller'
+      })
+      .when('/uploadProducts', {
+        templateUrl: 'templates/uploadProducts.html',
+        controller: 'uploadController'
       })
   })
