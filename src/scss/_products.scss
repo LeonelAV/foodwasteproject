@@ -134,3 +134,29 @@ select {
 #name, #distance {
   text-align: center;
 }
+
+.discount {
+  position: absolute;
+  z-index: 1;
+  width: 130px;
+}
+
+// .map > * {
+//   margin-top: 60px;
+//   margin: 0px;
+//   position: relative;
+//   position: fixed;
+//   height: 90vh;
+//   width: 50%; }
+//   
+
+.thumbnail > p {
+    font-family: Arial, sans-serif;
+    position: absolute;
+    z-index: 2;
+    margin-top: 1px;
+    margin-left: 34px;
+    font-size: 34px;
+    color: white;
+    transform: rotate(-8deg);
+}

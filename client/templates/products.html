@@ -29,7 +29,8 @@
                 <ul class="list-unstyled list-products">
                     <li ng-repeat="product in products | filter: query">
                             <div class="thumbnail">
-                            <!-- <img class="discount" src="img/discount50.jpeg"></img> -->
+                            <p>{{ product.discount }}%</p>
+                            <img class="discount" src="img/plaindiscount.png"></img>
                               <div class="container-image">
                                     <div class="img-bg" ng-style="{'background-image':'url({{product.image}})'}" ng-alt="{{ product.name }}">
                                     <div class="cover-hover">
@@ -37,14 +38,13 @@
                                     </div>
                               </div>
                                 <div class="caption">
-                                <h4 class="pull-right">now {{ product.price*(1-(product.discount/100)) | number: 2}}€</h4>
+                                <h4 class="pull-right">now {{ product.price*(1-(product.discount/100)) | number: 2  }}€</h4>
                                     <h4 class="price-review">{{product.price}}€</h4>
                                     <h5 id="name"> {{ product.name }}</h5>
                                     <p>Expery at: {{ product.experyAt}}</p>
                                     <h6 id="distance">Distance: 600m</h6>
                                     <p>{{ product.shop }}</p>
-                                    <p>{{ product.category }}</p>
-                                    <p><a href="#" class="btn btn-danger" role="button" ng-click="removeProduct(product._id)">Remove</a></p>
+                                    <!-- <p><a href="#" class="btn btn-danger" role="button" ng-click="removeProduct(product._id)">Remove</a></p> -->
                                 </div>
                             </div>
                             <!-- <div class="thumbnail products">

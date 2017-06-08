@@ -927,6 +927,21 @@ select {
 #name, #distance {
   text-align: center; }
 
+.discount {
+  position: absolute;
+  z-index: 1;
+  width: 130px; }
+
+.thumbnail > p {
+  font-family: Arial, sans-serif;
+  position: absolute;
+  z-index: 2;
+  margin-top: 1px;
+  margin-left: 34px;
+  font-size: 34px;
+  color: white;
+  transform: rotate(-8deg); }
+
 /****** shops.html *******/
 .shop-name {
   margin-top: 100px;
