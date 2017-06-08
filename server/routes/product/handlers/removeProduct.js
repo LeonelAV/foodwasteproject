@@ -1,4 +1,4 @@
-const Product = require(__base + 'models/Product')
+const Product = require(__base + 'models/product')
 
 function removeProduct (req,res) {
   const { id } = req.params
