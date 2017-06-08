@@ -924,6 +924,9 @@ select {
   height: 200px;
   background-size: cover; }
 
+#name, #distance {
+  text-align: center; }
+
 /****** shops.html *******/
 .shop-name {
   margin-top: 100px;

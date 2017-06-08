@@ -5,7 +5,18 @@
             <h1>{{ product.shop }}</h1>
             <p>{{ product.name }}</p>
             <a ng-click="getShop()" type="submit" data-dismiss="modal" class="page-scroll btn btn-xl"> See all products</a>
-            <img src="img/mapa.png">
+            <!-- <img src="img/mapa.png"> -->
+             <ng-map zoom="14" center="[43.07493, -89.381388]">
+             <!-- <marker icon="img/icon-marker.png" animation="DROP" position=""></marker> -->
+              </ng-map>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
         </div>
     </div>
 </div>
