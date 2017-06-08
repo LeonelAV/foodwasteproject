@@ -1,4 +1,4 @@
-const Product = require(__base + 'models/Product')
+const Product = require(__base + 'models/product')
 
 function addProduct( req, res ) {
   const { name, category, image, price, discount, experyAt, shop, address, coordinates, expired } = req.body

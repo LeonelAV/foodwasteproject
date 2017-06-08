@@ -8,3 +8,4 @@ router.get('/', getAll)
 router.post('/', addProduct)
 
 module.exports = router
+
