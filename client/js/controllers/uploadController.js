@@ -1,9 +1,9 @@
 angular.module('zeroWasteApp')
   .controller('uploadController', function ($scope, $rootScope, $location, ApiService) {
     $rootScope.section = 'upload'
-    $scope.uploadProducts = function(){
-      const {name, image, price, discount, experyAt, shop, address, expired, coordinates} = $scope
-      ApiService.uploadProducts({name, image, price, discount, experyAt, shop, address, expired, coordinates})
+    $scope.addProduct = function(){
+      const {name, category, image, price, discount, experyAt, shop, address, expired, coordinates} = $scope
+      ApiService.addProduct({name, category, image, price, discount, experyAt, shop, address, expired, coordinates})
           .then( console.log )
   }
 })

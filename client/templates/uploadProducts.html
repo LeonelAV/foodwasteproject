@@ -5,11 +5,15 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Upload a product</div>
                     <div class="panel-body">
-                        <form ng-submit="uploadProducts()" role="form" id="registForm">
+                        <form ng-submit="addProduct()" role="form" id="registForm">
                             <!-- <input type="hidden" name="contentCount" value="1" /> -->
                             <div class="form-group">
                                 <label for="shopName">Shop Name</label>
                                 <input ng-model="shop" name="shopName" type="text" class="form-control" id="input-code">
+                            </div>
+                            <div class="form-group">
+                                <label for="shopCategory">Shop Category</label>
+                                <input ng-model="category" name="shopCategory" type="text" class="form-control" id="input-code">
                             </div>
                             <div class="form-group">
                                 <label for="nameProduct">Product Name</label>

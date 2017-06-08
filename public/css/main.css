@@ -932,6 +932,35 @@ select {
   display: flex;
   justify-content: center; }
 
+#home .list-pizzas {
+  display: flex;
+  flex-wrap: wrap; }
+  #home .list-pizzas li {
+    width: 300px;
+    margin-right: 10px; }
+    #home .list-pizzas li .thumbnail {
+      height: 400px; }
+      #home .list-pizzas li .thumbnail .container-image {
+        position: relative;
+        cursor: pointer; }
+        #home .list-pizzas li .thumbnail .container-image:hover .cover-hover {
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+      #home .list-pizzas li .thumbnail .cover-hover {
+        width: 100%;
+        height: 200px;
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        display: none; }
+        #home .list-pizzas li .thumbnail .cover-hover a {
+          color: white;
+          font-size: 30px; }
+      #home .list-pizzas li .thumbnail .caption p:first-of-type {
+        height: 75px;
+        overflow: hidden; }
+
 /****** shops.html *******/
 .shop-name {
   margin-top: 100px;
@@ -947,6 +976,3 @@ select {
 
 .list-products-shop {
   margin-top: 50px; }
-
-.xsdasf {
-  background-color: black; }

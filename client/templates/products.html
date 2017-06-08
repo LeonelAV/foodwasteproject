@@ -1,8 +1,8 @@
-<div class="container">
+
     <div class="row">
         <div class="list-categories col-md-3">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for..." ng-model="sometext">
+                <input type="text" class="form-control" placeholder="Search for..." ng-model="query">
                 <span class="input-group-btn">
                     <button class="btn btn-default" type="button">Search</button>
                   </span>
@@ -24,12 +24,30 @@
             </select>
         </div>
         <div class="col-md-9">
-            <p class="result-input">Searching for: {{sometext}}</p>
-            <div class="row list-products">
-                <ul class="list-unstyled list-pizzas">
-                    <li ng-repeat="product in products">
-                        <div class="col-sm-6  col-md-4 setborder" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProduct_{{product._id}}">
-                            <div class="thumbnail products">
+            <p class="result-input">Searching for: {{query}}</p>
+            <div id="products" class="list-products">
+                <ul class="list-unstyled list-products">
+                    <li ng-repeat="product in products | filter: query">
+                            <div class="thumbnail">
+                            <!-- <img class="discount" src="img/discount50.jpeg"></img> -->
+                              <div class="container-image">
+                                    <div class="img-bg" ng-style="{'background-image':'url({{product.image}})'}" ng-alt="{{ product.name }}">
+                                    <div class="cover-hover">
+                                        <p><a data-toggle="modal" data-target="#modalProduct_{{ product._id }}"><i class="glyphicon glyphicon-zoom-in"></i></a></p>
+                                    </div>
+                              </div>
+                                <div class="caption">
+                                <h4 class="pull-right">now {{ product.price*(1-(product.discount/100))}}€</h4>
+                                    <h4 class="price-review">{{product.price}}€</h4>
+                                    <h5> {{ product.name }}</h5>
+                                    <p>Expery at: {{ product.experyAt}}</p>
+                                    <h6>Distance: 600m</h6>
+                                    <p>{{ product.shop }}</p>
+                                    <p>{{ product.category }}</p>
+                                    <p><a href="#" class="btn btn-danger" role="button" ng-click="removeProduct(product._id)">Remove</a></p>
+                                </div>
+                            </div>
+                            <!-- <div class="thumbnail products">
                                 <img class="discount" src="img/discount50.jpeg"></img>
                                 <img class="product-img" src="{{ product.image }}" alt="">
                                 <div class="caption">
@@ -37,26 +55,14 @@
                                     <h4 class="price-review">{{product.price}}€</h4>
                                     <h3> {{ product.name }}</h3>
                                     <p>Expery at: {{ product.experyAt}}</p>
-                                       <h5>Distance: 600m</h5>
+                                    <h5>Distance: 600m</h5>
                                     <p>{{ product.shop }}</p>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="modal fade bs-example-modal-lg" id="modalProduct_{{product._id}}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content details-modal">
-                        <h1 >{{ product.shop }}</h1>
-                        <p>{{ product.name }}</p>
-                        <a ng-click="getShop()" type="submit" data-dismiss="modal" class="page-scroll btn btn-xl"> See all products</a>
-                        <img src="img/mapa.png">
-                    </div>
-                </div>
-            </div>
+                            </div> -->
+                        <div ng-include="'templates/includes/modal.html'"></div>
                     </li>
                 </ul>
             </div>
-            <!--Modal content  -->
-            
         </div>
     </div>
-</div>
+

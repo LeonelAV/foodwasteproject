@@ -840,35 +840,8 @@ body {
 .list-categories {
   margin-top: 130px; }
 
-.list-products {
-  margin-top: 62px; }
-
-.products {
-  box-shadow: 0px 0px 1px 0px;
-  border: 10px red; }
-
-@media (min-width: 692px) {
-  .products {
-    width: 100%;
-    height: 600px; } }
-
-@media (min-width: 892px) {
-  .products {
-    width: 100%;
-    height: 450px; } }
-
 .list-group {
   margin-bottom: 50px; }
-
-.products:hover {
-  -webkit-transform: scale(1.06);
-  -moz-transform: scale(1.06);
-  -ms-transform: scale(1.06);
-  -o-transform: scale(1.06);
-  transform: scale(1.03); }
-
-.products {
-  border: thin #FFFFFF; }
 
 select {
   width: 100%;
@@ -880,19 +853,9 @@ select {
   line-height: 1.5em;
   padding: 0.5em 3.5em 0.5em 1em; }
 
-.discount {
-  margin-right: 10px;
-  width: 70%;
-  float: left;
-  position: absolute;
-  z-index: 1; }
-
 .fish-shop {
   width: 80%;
   border-radius: 100%; }
-
-.list-products {
-  cursor: pointer; }
 
 .result-input {
   font-size: 30px;
@@ -904,9 +867,6 @@ select {
   margin-top: 42px;
   font-size: 20px;
   margin-bottom: 20px; }
-
-.product-img {
-  padding-top: 45px; }
 
 /******* line in price ****/
 .price-review {
@@ -928,9 +888,41 @@ select {
   transform: rotate(5deg); }
 
 /********** ******* ******* ***** ******/
-.products h3, h5 {
+#products .list-products {
+  padding-left: 50px;
   display: flex;
-  justify-content: center; }
+  flex-wrap: wrap; }
+  #products .list-products li {
+    width: 300px;
+    margin-right: 10px; }
+    #products .list-products li .thumbnail {
+      height: 400px; }
+      #products .list-products li .thumbnail .container-image {
+        position: relative;
+        cursor: pointer; }
+        #products .list-products li .thumbnail .container-image:hover .cover-hover {
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+      #products .list-products li .thumbnail .cover-hover {
+        width: 100%;
+        height: 200px;
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        display: none; }
+        #products .list-products li .thumbnail .cover-hover a {
+          color: white;
+          font-size: 30px; }
+      #products .list-products li .thumbnail .caption p:first-of-type {
+        overflow: hidden; }
+
+.list-categories {
+  padding-left: 60px; }
+
+.img-bg {
+  height: 200px;
+  background-size: cover; }
 
 /****** shops.html *******/
 .shop-name {
@@ -948,9 +940,5 @@ select {
 .list-products-shop {
   margin-top: 50px; }
 
-/************ uploadProducts.html ***********/
-.form-index{
-  margin-top: 150px;
-}
-
-/******** ********* ****************/
+.form-index {
+  margin-top: 150px; }
