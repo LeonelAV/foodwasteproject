@@ -20,9 +20,25 @@ angular.module('zeroWasteApp')
       })
   }
 
+  var getShops = function() {
+    return $http.get('/api/shops')
+      .then(function(response){
+        return response.data
+      })
+  }
+
+    var addShop = function(data) {
+    return $http.post('/api/shops', data)
+      .then(function(response){
+        return response.data
+      })
+  }
+
   return {
     getProducts: getProducts,
     addProduct: addProduct,
-    removeProduct: removeProduct
+    removeProduct: removeProduct,
+    getShops: getShops,
+    addShop: addShop
   }
 })

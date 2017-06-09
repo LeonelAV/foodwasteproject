@@ -29,3 +29,27 @@
 ```
   curl -H "Content-Type: application/json" -X POST -d '{"name":"aaaa","shop": { "name": "name of the shop", "address": "this is the address" } }' localhost:3000/api/products
 ```
+
+```
+DB_URI=mongodb://admin:admin100@ds115352.mlab.com:15352/zerowaste
+```
+
+
+##  Add a Shop
+
+```
+ curl -X POST --data "name=Shop test&image=https://www.pizzahut.com/assets/w/tile/thor/Cheese.png&address=Pescados Sepal S.L.&address=Rambla de la Marina, 206, 08907 Hospitalet de Llobregat (L')" localhost:3000/api/shops
+```
+
+## Get All Shops
+
+```
+curl localhost:3000/api/products
+
+```
+ 
+## Remove Shop
+
+```
+curl -X DELETE localhost:3000/api/shop/5935d7f15eb7682140022824
+```

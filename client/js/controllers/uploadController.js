@@ -6,7 +6,13 @@ angular.module('zeroWasteApp')
       ApiService.addProduct({name, category, image, price, discount, experyAt, shop, address, expired, coordinates})
           .then( console.log )
   }
+  $scope.addShop = function(){
+      const {name, category, image, address, coordinates} = $scope
+      ApiService.addShop({name, category, image, address, coordinates})
+          .then( console.log )
+  }
 })
+
 
 
   // angular.module('zeroWasteApp')

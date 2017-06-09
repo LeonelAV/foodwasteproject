@@ -29,7 +29,7 @@
                 <ul class="list-unstyled list-products">
                     <li ng-repeat="product in products | filter: query">
                             <div class="thumbnail">
-                            <p>{{ product.discount }}%</p>
+                            <p>-{{ product.discount }}%</p>
                             <img class="discount" src="img/plaindiscount.png"></img>
                               <div class="container-image">
                                     <div class="img-bg" ng-style="{'background-image':'url({{product.image}})'}" ng-alt="{{ product.name }}">
@@ -43,7 +43,7 @@
                                     <h5 id="name"> {{ product.name }}</h5>
                                     <p>Expery at: {{ product.experyAt}}</p>
                                     <h6 id="distance">Distance: 600m</h6>
-                                    <p>{{ product.shop }}</p>
+                                     <p>{{ product.shop }}</p>
                                     <!-- <p><a href="#" class="btn btn-danger" role="button" ng-click="removeProduct(product._id)">Remove</a></p> -->
                                 </div>
                             </div>
@@ -62,6 +62,7 @@
                         <div ng-include="'templates/includes/modal.html'"></div>
                     </li>
                 </ul>
+
             </div>
         </div>
     </div>

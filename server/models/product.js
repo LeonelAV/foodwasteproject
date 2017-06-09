@@ -2,17 +2,14 @@ const mongoose = require('mongoose')
 const collection = 'products'
 
 const ProductSchema = new mongoose.Schema({
-  name: {
-    type: String
-  },
+  name: String,
+  shop: String,
   category: String,
   image: String,
   price: Number,
   discount: Number,
   experyAt: String,
-  shop: String,
-  address: String,
-  coordinates: [ Number, Number ],
+  // shop: { type: mongoose.Schema.ObjectId, ref: 'Shop' },
   expired: {
     type: Boolean,
     default: false
