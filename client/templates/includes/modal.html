@@ -1,21 +1,19 @@
-<div class="modal fade bs-example-modal-lg" id="modalProduct_{{product._id}}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-    <div class="modal-dialog modal-lg" role="document">
+<div class="modal fade bs-example-modal-lg" id="modalProduct_{{product._id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
         <div class="modal-content details-modal">
-            <h1>{{ product.shop }}</h1>
-            <p>{{ product.name }}</p>
+            <h4>{{ product.shop.name}}</h4>
+            <p>{{ product.shop.address }}</p>
             <a ng-click="getShop()" type="submit" data-dismiss="modal" class="page-scroll btn btn-xl"> See all products</a>
             <!-- <img src="img/mapa.png"> -->
             <div id="map">
-                <ng-map id="main-map" center="41.381789, 2.172363" zoom="15"></ng-map>
+                <ng-map id="main-map" center="{{ product.shop.coordinates[0] }}, {{ product.shop.coordinates[1] }}" zoom="18">
+                    <marker  class="map-icon map-icon-point-of-interest" animation="DROP" position="[{{ product.shop.coordinates[0] }}, {{ product.shop.coordinates[1] }}]"></marker>
+                </ng-map>
+
             </div>
             <!-- <marker icon="img/icon-marker.png" animation="DROP" position=""></marker> -->
         </div>
         </li>
         </ul>
     </div>
-</div>
-</div>
-</section>
-</div>
-</div>
 </div>

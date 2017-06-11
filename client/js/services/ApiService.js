@@ -27,7 +27,7 @@ angular.module('zeroWasteApp')
       })
   }
 
-    var addShop = function(data) {
+  var addShop = function(data) {
     return $http.post('/api/shops', data)
       .then(function(response){
         return response.data

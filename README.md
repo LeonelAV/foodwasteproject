@@ -3,7 +3,7 @@
 ## Add Products
 
 ```
-    curl -X POST --data "name=CHEESE&image=https://www.pizzahut.com/assets/w/tile/thor/Cheese.png&price=100&discount=50&experyAt=15/06/2017&shop=Pescados Sepal S.L.&address=Rambla de la Marina, 206, 08907 Hospitalet de Llobregat (L'), Barcelona&coordinates=[100, 120]" localhost:3000/api/products
+    curl -X POST --data "name=CHEESE&image=https://www.pizzahut.com/assets/w/tile/thor/Cheese.png&price=100&discount=50&experyAt=15/06/2017&shop=Pescados Sepal S.L.&address=Rambla de la Marina, 206, 08907 Hospitalet de Llobregat (L'), Barcelona" localhost:3000/api/products
 ```
 
 ## Get All Products
@@ -38,7 +38,7 @@ DB_URI=mongodb://admin:admin100@ds115352.mlab.com:15352/zerowaste
 ##  Add a Shop
 
 ```
- curl -X POST --data "name=Shop test&image=https://www.pizzahut.com/assets/w/tile/thor/Cheese.png&address=Pescados Sepal S.L.&address=Rambla de la Marina, 206, 08907 Hospitalet de Llobregat (L')" localhost:3000/api/shops
+curl -X POST --data "name=Shop test&image=https://www.pizzahut.com/assets/w/tile/thor/Cheese.png&address=Pescados Sepal S.L.&address=Rambla de la Marina, 206, 08907 Hospitalet de Llobregat (L')&coordinates=41.373717" -d "coordinates=15" localhost:3000/api/shops
 ```
 
 ## Get All Shops

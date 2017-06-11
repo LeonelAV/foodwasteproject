@@ -1,58 +1,91 @@
-
-    <div class="container form-index">
-        <div class="row">
-            <div class="panel-group">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Upload a product</div>
-                    <div class="panel-body">
-                        <form ng-submit="addProduct()" role="form" id="registForm">
-                            <!-- <input type="hidden" name="contentCount" value="1" /> -->
-                            <div class="form-group">
-                                <label for="shopName">Shop Name</label>
-                                <input ng-model="shop" name="shopName" type="text" class="form-control" id="input-code">
-                            </div>
-                            <<!-- div class="form-group">
-                                <label for="shopCategory">Shop Category</label>
-                                <input ng-model="category" name="shopCategory" type="text" class="form-control" id="input-code">
-                            </div> -->
-                            <div class="form-group">
-                                <label for="nameProduct">Product Name</label>
-                                <input ng-model="name" name="nameProduct" type="text" class="form-control" id="input-code">
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-md-6">
-                                  <label for="priceProduct">Price</label>
-                                    <div class="input-group" id="input-group-1">
-                                        <input ng-model="price" name="priceProduct" type="number" class="form-control" id="content-1">
-                                    </div>
-                                    <!-- /input-group -->
+<div class="container form-index">
+    <div class="row">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">Upload a product</div>
+                <div class="panel-body">
+                    <form ng-submit="addProduct()" role="form" id="registForm">
+                        <div class="form-group">
+                            <label for="nameProduct">Product Name</label>
+                            <input ng-model="name" name="nameProduct" type="text" class="form-control" id="input-code">
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-4">
+                                <label for="priceProduct">Price</label>
+                                <div class="input-group" id="input-group-1">
+                                    <input ng-model="price" name="priceProduct" type="number" class="form-control" id="content-1">
                                 </div>
-                                <div class="col-md-6" >
-                                  <label for="discountProduct">Discount</label>
-                                    <div class="input-group" id="input-group-1">
-                                        <input ng-model="discount" name="discountProduct" type="text" class="form-control" id="content-1">
-                                    </div>
-                                    <!-- /input-group -->
+                                <!-- /input-group -->
+                            </div>
+                            <div class="col-md-4">
+                                <label for="discountProduct">Discount</label>
+                                <div class="input-group" id="input-group-1">
+                                    <input ng-model="discount" name="discountProduct" type="text" class="form-control" id="content-1">
                                 </div>
+                                <!-- /input-group -->
+                                
                             </div>
-                            <div class="form-group">
-                                <label for="experyDate">Date of Expery</label>
-                                <input ng-model="experyAt" name="experyDate" type="date" class="form-control" id="input-StartDate-1" placeholder="시작일">
+                            <div class="col-md-4">
+                                <label for="idShop">ID</label>
+                                <div class="input-group" id="input-group-1">
+                                    <input ng-model="shop" name="idShop" type="text" class="form-control" id="content-1">
+                                </div>
+                                <!-- /input-group -->
                             </div>
-                            <div class="form-group">
-                                <label for="imageURL">Image URL</label>
-                                <input ng-model="image" name="imageURL" type="text" class="form-control" id="input-code">
-                            </div>
-<!--                             <div class="form-group">
-                                <label for="imageProduct">Image of the product</label>
-                                <input ng-model="image" name="imageProduct" type="file" id="exampleInputFile">
-                                <p class="help-block">.jpg, .gif, .png</p>
-                            </div> -->
-                            <button type="submit" class="btn btn-default">Submit</button>
-                        </form>
-                    </div>
-                    <!-- END panel-body -->
+                        </div>
+                        <div class="form-group">
+                            <label for="experyDate">Date of Expery</label>
+                            <input ng-model="experyAt" name="experyDate" type="date" class="form-control" id="input-StartDate-1">
+                        </div>
+                        <div class="form-group">
+                            <label for="imageURL">Image URL</label>
+                            <input ng-model="image" name="imageURL" type="text" class="form-control" id="input-code">
+                        </div>
+                        <button  type="submit" class="btn btn-default">Submit</button>
+                    </form>
                 </div>
+                <!-- END panel-body -->
             </div>
         </div>
     </div>
+    <!-- admin panel-->
+</div>
+<div class='main-panel'>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <button type="button" class="btn btn-primary"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ADD PRODUCTS </button>
+            </div>
+            <!-- /.col-lg-6 -->
+        </div>
+        <!-- /.row -->
+        </br>
+        <div style="height: 800px; overflow: auto">
+            <table class="table" id="table">
+                <thead>
+                    <tr>
+                        <th>Picture</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Discount</th>
+                        <th>Date of Expery</th>
+                    </tr>
+                </thead>
+                <tbody>
+                            <tr ng-repeat-start="product in products">
+                             <form ng-submit="updateProduct()" role="form" id="productUpdate">
+                                <td><img id="panel-image" src="{{product.image}}"></td>
+                                <td>{{product.name}}</td>
+                                <td>{{product.price}}</td>
+                                <td>{{product.discount}}</td>
+                                <td>{{product.experyAt}}</td>
+                                <!-- <td><p><a href="#" class="btn btn-danger" role="button" ng-click="updateProduct(product._id)">Update</a></p></td> -->
+                                <td><p><a href="#" class="btn btn-danger" role="button" ng-click="removeProduct(product._id)">Remove</a></p></td>
+                                
+                            </tr>
+                            <tr ng-repeat-end></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

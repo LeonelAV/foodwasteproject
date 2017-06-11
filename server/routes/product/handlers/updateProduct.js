@@ -2,13 +2,16 @@ const Product = require(__base + 'models/product')
 
 function updateProduct (req,res) {
   const { id } = req.params
-  const {name, price, discount, experyAt } = req.body
+  const {name, category, image, price, discount, experyAt, expired } = req.body
 
   const dataToUpdate = {}
   if (name) dataToUpdate.name = name
-  if (price) dataToUpdate.description = price
-  if (discount) dataToUpdate.image = discount
-  if (experyAt) dataToUpdate.image = experyAt
+  if (category) dataToUpdate.category = category
+  if (image) dataToUpdate.image = image
+  if (price) dataToUpdate.price = price
+  if (discount) dataToUpdate.discount = discount
+  if (experyAt) dataToUpdate.experyAt = experyAt
+  if (expired) dataToUpdate.expired = expired
 
 
   Product.findByIdAndUpdate( id, dataToUpdate)

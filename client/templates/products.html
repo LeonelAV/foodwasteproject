@@ -4,15 +4,16 @@
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search for..." ng-model="query">
                 <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Search</button>
+                    <button  class="btn btn-default" type="button">Search</button>
                   </span>
             </div>
             <p class="lead1">Category</p>
             <div class="list-group">
-                <a href="#" class="list-group-item">Supermaket</a>
-                <a href="#" class="list-group-item">Fish Shops</a>
-                <a href="#" class="list-group-item">Bakery</a>
-                <a href="#" class="list-group-item">Butchery</a>
+                <a type="button" ng-model="supermaket" ng-click="showQuery()"  class="list-group-item" >Supermaket</a>
+                <a type="button" ng-model="fishShop" ng-click="showFishShop()" class="list-group-item">Fish Shops</a>
+                <a type="button" ng-model="bakery" ng-click="showBakery()"  class="list-group-item">Bakery</a>
+                <a type="button" ng-model="butchery" ng-click="showButchery()"  class="list-group-item">Butchery</a>
+                <a type="button" ng-model="showAll" ng-click="showAll()"  class="list-group-item">See All Categories</a>
             </div>
             <p class="lead1">Distance</p>
             <select class="distance-select">
@@ -43,8 +44,9 @@
                                     <h5 id="name"> {{ product.name }}</h5>
                                     <p>Expery at: {{ product.experyAt}}</p>
                                     <h6 id="distance">Distance: 600m</h6>
-                                     <p>{{ product.shop }}</p>
-                                    <!-- <p><a href="#" class="btn btn-danger" role="button" ng-click="removeProduct(product._id)">Remove</a></p> -->
+                                     <p>{{ product.shop.address}}</p>
+                                     <p>{{ product.shop.name}}</p>
+                                    <p><a href="#" class="btn btn-danger" role="button" ng-click="removeProduct(product._id)">Remove</a></p>
                                 </div>
                             </div>
                             <!-- <div class="thumbnail products">

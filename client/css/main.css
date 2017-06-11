@@ -960,3 +960,17 @@ select {
 
 .form-index {
   margin-top: 150px; }
+
+.main-panel {
+  margin-top: 150px; }
+
+#panel-image {
+  width: 50px; }
+
+#map > * {
+  margin-top: 60px;
+  margin: 0px;
+  position: relative;
+  position: fixed;
+  height: 60vh;
+  width: 100%; }

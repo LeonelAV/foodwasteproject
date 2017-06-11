@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>zero waste</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <!-- Theme CSS -->
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class='main-panel'>
+<div class="container">
+<div class="row">
+  <div class="col-lg-6">
+    <button type="button" class="btn btn-primary"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ADD PRODUCTS </button>
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+
+</br>
+                <div style="height: 800px; overflow: auto">
+                    <table class="table" id="table" >
+                        <thead>
+                            <tr>
+                                <th>Picture</th>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Discount</th>
+                                <th>Date of Expery</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img id="panel-image" src="../img/carrots.jpg"> </td>
+                                <td>Carrots</td>
+                                <td>3€</td>
+                                <td>20%</td>
+                                <td>23/06/2017</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">RM234567</a></td>
+                                <td>23 Jan 2015</td>
+                                <td>Agus Gunawan</td>
+                                <td>Laki-laki</td>
+                                <td>64 tahun / 08 Feb 1976</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">RM234587</a></td>
+                                <td>19 Jan 2015</td>
+                                <td>Budi Santosa</td>
+                                <td>Laki-laki</td>
+                                <td>37 tahun / 01 Okt 1950</td>
+                            </tr>
+                             <tr>
+                                <td><a href="#">RM234542</a></td>
+                                <td>18 Des 2014</td>
+                                <td>Bunga Lestari</td>
+                                <td>Prempuan</td>
+                                <td>29 tahun / 30 Jul 1980</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+</div>
+</div>
+
+<body id="page-top" class="index">
+    <div ng-include src="'templates/includes/header.html'"></div>
+    <ng-view></ng-view>
+    <div ng-include src="'templates/includes/footer.html'"></div>
+    <!--  Angular -->
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+    <!-- jQuery -->
+    <script src="//rawgithub.com/stidges/jquery-searchable/master/dist/jquery.searchable-1.0.0.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+    <!-- MAIN ANGULAR -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+    <!-- CONTROLLERS -->
+    <script type="text/javascript" src="js/controllers/homeController.js"></script>
+    <script type="text/javascript" src="js/controllers/productsController.js"></script>
+    <script type="text/javascript" src="js/controllers/headerController.js"></script>
+    <script type="text/javascript" src="js/controllers/uploadController.js"></script>
+    
+
+    <!-- SERVICES/FACTORY -->
+    <script type="text/javascript" src="js/services/ApiService.js"></script>
+    <!-- Script for API Google and Ng-map -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDafjpKKDyuZewwazCQGpx6uUnjZHGODR8"></script>
+    <script type="text/javascript" src="https://rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.min.js"></script>
+</body>
+
+</html>
+
