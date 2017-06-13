@@ -4,7 +4,7 @@ angular.module('zeroWasteApp')
 
     $scope.getProducts = function(){
       console.log('show something')
-      ApiService.getProducts()
+      $rootScope.allProducts = ApiService.getProducts()
       .then(function(response){
         $rootScope.allProducts = response
         //console.log($scope.allProducts)

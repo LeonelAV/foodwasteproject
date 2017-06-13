@@ -5,7 +5,7 @@ function getAll(req, res) {
   Product.find({})
         .populate('shop')
         .exec(products => res.json(products))
-        //.then(()  => res.status(200).json({ msg: 'product show...'}))
+        .then(()  => res.status(200).json({ msg: 'product show...'}))
 }
 
 module.exports = getAll
