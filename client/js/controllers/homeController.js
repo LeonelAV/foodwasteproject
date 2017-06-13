@@ -4,10 +4,11 @@ angular.module('zeroWasteApp')
 
     $scope.getProducts = function(){
       console.log('show something')
-      $scope.products = ApiService.getProducts()
+      ApiService.getProducts()
       .then(function(response){
-        $rootScope.products = response
-        console.log (response)
+        $rootScope.allProducts = response
+        console.log($scope.allProducts)
+        //console.log ($rootScope.products)
       })
     $location.path('/products/')
     }

@@ -27,7 +27,7 @@
         <p class="result-input">Searching for: {{query}}</p>
         <div id="products" class="list-products">
             <ul class="list-unstyled list-products">
-                <li ng-repeat="product in products | filter: query">
+                <li ng-repeat="product in allProducts | filter: query">
                     <div class="thumbnail">
                         <p>-{{ product.discount }}%</p>
                         <img class="discount" src="img/plaindiscount.png"></img>
