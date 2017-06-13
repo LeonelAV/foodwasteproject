@@ -3,6 +3,7 @@ angular.module('zeroWasteApp')
     $rootScope.section = 'HOME'
 
     $scope.getProducts = function(){
+      console.log('show something')
       $scope.products = ApiService.getProducts()
       .then(function(response){
         $rootScope.products = response
