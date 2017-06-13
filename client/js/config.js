@@ -15,7 +15,7 @@ angular.module('zeroWasteApp')
       })
       .when('/login', {
         templateUrl: 'templates/login.html',
-        controller: 'headerControlller'
+        controller: 'headerController'
       })
       .when('/uploadProducts', {
         templateUrl: 'templates/uploadProducts.html',
