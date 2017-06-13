@@ -3,11 +3,9 @@ const Product = require(__base + 'models/product')
 function getAll(req, res) {
 
   Product.find({})
-          //.then(products => res.json(products))
         .populate('shop')
-        .exec(function(err, product) {
-	      res.json( product)
-	  })
+        .exec(products => products)
+        .then(products => res.json(products))
 }
 
 module.exports = getAll
