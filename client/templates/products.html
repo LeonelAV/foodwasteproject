@@ -1,55 +1,55 @@
-
-    <div class="row">
-        <div class="list-categories col-md-3">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for..." ng-model="query">
-                <span class="input-group-btn">
+<div class="row">
+    <div class="list-categories col-md-3">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for..." ng-model="query">
+            <span class="input-group-btn">
                     <button  class="btn btn-default" type="button">Search</button>
                   </span>
-            </div>
-            <p class="lead1">Category</p>
-            <div class="list-group">
-                <a type="button" ng-model="supermaket" ng-click="showQuery()"  class="list-group-item" >Supermaket</a>
-                <a type="button" ng-model="fishShop" ng-click="showFishShop()" class="list-group-item">Fish Shops</a>
-                <a type="button" ng-model="bakery" ng-click="showBakery()"  class="list-group-item">Bakery</a>
-                <a type="button" ng-model="butchery" ng-click="showButchery()"  class="list-group-item">Butchery</a>
-                <a type="button" ng-model="showAll" ng-click="showAll()"  class="list-group-item">See All Categories</a>
-            </div>
-            <p class="lead1">Distance</p>
-            <select class="distance-select">
-                <option>+ 1 km</option>
-                <option>+ 2 km</option>
-                <option>+ 3 km</option>
-                <option>+ 5 km</option>
-                <option>+ 10 km</option>
-            </select>
         </div>
-        <div class="col-md-9">
-            <p class="result-input">Searching for: {{query}}</p>
-            <div id="products" class="list-products">
-                <ul class="list-unstyled list-products">
-                    <li ng-repeat="product in products | filter: query">
-                            <div class="thumbnail">
-                            <p>-{{ product.discount }}%</p>
-                            <img class="discount" src="img/plaindiscount.png"></img>
-                              <div class="container-image">
-                                    <div class="img-bg" ng-style="{'background-image':'url({{product.image}})'}" ng-alt="{{ product.name }}">
-                                    <div class="cover-hover">
-                                        <p><a data-toggle="modal" data-target="#modalProduct_{{ product._id }}"><i class="glyphicon glyphicon-zoom-in"></i></a></p>
-                                    </div>
-                              </div>
-                                <div class="caption">
-                                <h4 class="pull-right">now {{ product.price*(1-(product.discount/100)) | number: 2  }}€</h4>
-                                    <h4 class="price-review">{{product.price}}€</h4>
-                                    <h5 id="name"> {{ product.name }}</h5>
-                                    <p>Expery at: {{ product.experyAt}}</p>
-                                    <h6 id="distance">Distance: 600m</h6>
-                                     <p>{{ product.shop.address}}</p>
-                                     <p>{{ product.shop.name}}</p>
-                                    <p><a href="#" class="btn btn-danger" role="button" ng-click="removeProduct(product._id)">Remove</a></p>
+        <p class="lead1">Category</p>
+        <div class="list-group">
+            <a type="button" ng-model="supermaket" ng-click="showQuery()" class="list-group-item">Supermaket</a>
+            <a type="button" ng-model="fishShop" ng-click="showFishShop()" class="list-group-item">Fish Shops</a>
+            <a type="button" ng-model="bakery" ng-click="showBakery()" class="list-group-item">Bakery</a>
+            <a type="button" ng-model="butchery" ng-click="showButchery()" class="list-group-item">Butchery</a>
+            <a type="button" ng-model="showAll" ng-click="showAll()" class="list-group-item">See All Categories</a>
+        </div>
+        <p class="lead1">Distance</p>
+        <select class="distance-select">
+            <option>+ 1 km</option>
+            <option>+ 2 km</option>
+            <option>+ 3 km</option>
+            <option>+ 5 km</option>
+            <option>+ 10 km</option>
+        </select>
+    </div>
+    <div class="col-md-9">
+        <p class="result-input">Searching for: {{query}}</p>
+        <div id="products" class="list-products">
+            <ul class="list-unstyled list-products">
+                <li ng-repeat="product in products | filter: query">
+                    <div class="thumbnail">
+                        <p>-{{ product.discount }}%</p>
+                        <img class="discount" src="img/plaindiscount.png"></img>
+                        <div class="container-image">
+                            <div class="img-bg" ng-style="{'background-image':'url({{product.image}})'}" ng-alt="{{ product.name }}">
+                                <div class="cover-hover">
+                                    <p><a data-toggle="modal" data-target="#modalProduct_{{ product._id }}"><i class="glyphicon glyphicon-zoom-in"></i></a></p>
                                 </div>
                             </div>
-                            <!-- <div class="thumbnail products">
+                            <div class="caption">
+                                <h4 class="pull-right">now {{ product.price*(1-(product.discount/100)) | number: 2  }}€</h4>
+                                <h4 class="price-review">{{product.price}}€</h4>
+                                <h5 id="name"> {{ product.name }}</h5>
+                                <p>Expery at: {{ product.experyAt}}</p>
+                                <h6 id="distance">Distance: 600m</h6>
+                                <p>{{ product.shop.lat}}</p>
+                                <p>{{ product.shop.lng}}</p>
+                                <p>{{ product.shop.name}}</p>
+                                <p><a href="#" class="btn btn-danger" role="button" ng-click="removeProduct(product._id)">Remove</a></p>
+                            </div>
+                        </div>
+                        <!-- <div class="thumbnail products">
                                 <img class="discount" src="img/discount50.jpeg"></img>
                                 <img class="product-img" src="{{ product.image }}" alt="">
                                 <div class="caption">
@@ -62,10 +62,8 @@
                                 </div>
                             </div> -->
                         <div ng-include="'templates/includes/modal.html'"></div>
-                    </li>
-                </ul>
-
+                </li>
+            </ul>
             </div>
         </div>
     </div>
-

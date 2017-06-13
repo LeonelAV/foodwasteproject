@@ -25,4 +25,5 @@ angular.module('zeroWasteApp')
         templateUrl: 'templates/uploadShop.html',
         controller: 'uploadController'
       })
+      
   })

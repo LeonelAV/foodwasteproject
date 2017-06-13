@@ -34,11 +34,31 @@ angular.module('zeroWasteApp')
       })
   }
 
+  var getCoordenates = function (address) {
+    return $http.post('https://maps.googleapis.com/maps/api/geocode/json?address=' + address + '&key=AIzaSyDafjpKKDyuZewwazCQGpx6uUnjZHGODR8')
+      .then(function(response){
+        return response.data.results[0].geometry.bounds.northeast
+      })
+  }
+
+  var getDistanceBetween = function (origin, destination) {
+    return $http.post(' http://maps.googleapis.com/maps/api/distancematrix/xml?origins=' + origin + '&destinations=' + destination + '&mode=walking')
+      .then(function(response){
+        return response
+      })
+  }
+
+  
+
+
   return {
     getProducts: getProducts,
     addProduct: addProduct,
     removeProduct: removeProduct,
     getShops: getShops,
-    addShop: addShop
+    addShop: addShop,
+    getCoordenates: getCoordenates,
+    getDistanceBetween: getDistanceBetween
+
   }
 })

@@ -1,58 +1,56 @@
-
-    <div class="container form-index">
-        <div class="row">
-            <div class="panel-group">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Upload a Shop</div>
-                    <div class="panel-body">
-                        <form ng-submit="addShop()" role="form" id="registForm">
-                            <!-- <input type="hidden" name="contentCount" value="1" /> -->
-                            <div class="form-group">
-                                <label for="shopName">Shop Name</label>
-                                <input ng-model="name" name="shopName" type="text" class="form-control" id="input-code">
-                            </div>
-                            <div class="form-group">
-                                <label for="shopCategory">Shop Category</label>
-                                <input ng-model="category" name="shopCategory" type="text" class="form-control" id="input-code">
-                            </div>
-                            <div class="form-group">
-                                <label for="shopAddress">Address</label>
-                                <input ng-model="address" name="shopAddress" type="text" class="form-control" id="input-code">
-                            </div>
-                            <div class="row form-group">
-                               <!--  <div class="col-md-6">
-                                  <label for="priceProduct">Price</label>
-                                    <div class="input-group" id="input-group-1">
-                                        <input ng-model="price" name="priceProduct" type="number" class="form-control" id="content-1">
-                                    </div>
-                                    /input-group
-                                </div>
-                                <div class="col-md-6" >
-                                  <label for="discountProduct">Discount</label>
-                                    <div class="input-group" id="input-group-1">
-                                        <input ng-model="discount" name="discountProduct" type="text" class="form-control" id="content-1">
-                                    </div>
-                                    /input-group
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="experyDate">Date of Expery</label>
-                                <input ng-model="experyAt" name="experyDate" type="date" class="form-control" id="input-StartDate-1" placeholder="시작일">
-                            </div> -->
-                            <div class="form-group">
-                                <label for="imageShop">Image URL</label>
-                                <input ng-model="imageShop" name="imageShop" type="text" class="form-control" id="input-code">
-                            </div>
-<!--                             <div class="form-group">
+<div class="container form-index">
+    <div class="row">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">Upload a Shop</div>
+                <!--      user location  -->
+                <p>
+                    <button ng-click="geoFindMe()">Show my location</button>
+                    <button ng-click="seeDistance(); getCoordenates(); geoFindMe()">Distance between</button>
+                </p>
+                <p>{{userLatitude}}</p>
+                <p>{{userLongitude}}</p>
+                <div id="demo"></div>
+                <!--    user location end -->
+                <div class="panel-body">
+                    <form role="form" id="registForm">
+                        <!-- <input type="hidden" name="contentCount" value="1" /> -->
+                        <div class="form-group">
+                            <label for="shopName">Shop Name</label>
+                            <input ng-model="name" name="shopName" type="text" class="form-control" id="input-code">
+                        </div>
+                        <div class="form-group">
+                            <label for="shopCategory">Shop Category</label>
+                            <input ng-model="category" name="shopCategory" type="text" class="form-control" id="input-code">
+                        </div>
+                        <div class="form-group">
+                            <label for="shopAddress">Address</label>
+                            <input ng-model="address" name="shopAddress" type="text" class="form-control" id="input-code">
+                        </div>
+                        <!--  Get the coordenates -->
+                        <div class="hidden form-group">
+                            <label for="shopCord">Address</label>
+                            <input ng-model="address" name="shopCord" type="text" class="form-control" id="input-code">
+                            <input ng-value="{{ lat }}" ng-model="lat" required>
+                            <input ng-value="{{ lng }}" ng-model="lng" required>
+                        </div>
+                        <p><a class="btn btn-danger" role="button" ng-click="getCoordenates()">Validate Your address</a></p>
+                        <p>{{info}}</p>
+                </div>
+                <div class="form-group">
+                    <label for="imageShop">Image URL</label>
+                    <input ng-model="imageShop" name="imageShop" type="text" class="form-control" id="input-code">
+                </div>
+                <!--                             <div class="form-group">
                                 <label for="imageProduct">Image of the product</label>
                                 <input ng-model="image" name="imageProduct" type="file" id="exampleInputFile">
                                 <p class="help-block">.jpg, .gif, .png</p>
                             </div> -->
-                            <button type="submit" class="btn btn-default">Submit</button>
-                        </form>
-                    </div>
-                    <!-- END panel-body -->
-                </div>
+                <button ng-click="addShop()" type="submit" class="btn btn-default">Submit</button>
+                </form>
             </div>
+            <!-- END panel-body -->
         </div>
     </div>
+</div>
+</div>

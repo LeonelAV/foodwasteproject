@@ -6,7 +6,9 @@ const ShopSchema = new mongoose.Schema({
   category: String,
   image: String,
   address: String,
-  coordinates: [ Number, Number ]
+  // coordinates: [ Number, Number ]
+  lat: Number,
+  lng: Number
 }, { collection })
 
 module.exports = mongoose.model('Shop', ShopSchema)

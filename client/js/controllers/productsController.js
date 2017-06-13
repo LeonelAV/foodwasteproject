@@ -26,11 +26,6 @@ angular.module('zeroWasteApp')
     $scope.showAll = function() {
       $scope.query=""
   }
-    
-    
-    // $scope.filteredProducts = function () {
-
-    // }
 
   })
   
