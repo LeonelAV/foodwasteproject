@@ -5,7 +5,7 @@ angular.module('zeroWasteApp')
     console.log("service!!")
     return $http.get('/api/products')
       .then(function(response){
-        console.log(response.data)
+        console.log(response)
         return response.data
       })
   }
