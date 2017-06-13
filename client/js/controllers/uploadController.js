@@ -6,6 +6,7 @@ angular.module('zeroWasteApp')
             const products = {name, image, price, experyAt }
             ApiService.addProduct({ name, category, image, price, discount, experyAt, shop })
                 .then(console.log(products))
+                $location.path( "/products" )
         }
         $scope.addShop = function() {
 
@@ -18,6 +19,7 @@ angular.module('zeroWasteApp')
      $scope.removeProduct = function(id) {
        ApiService.removeProduct(id)
       .then(console.log)
+       $location.path( "/products" )
     }
 
     // $scope.getDistanceBetween = function() {

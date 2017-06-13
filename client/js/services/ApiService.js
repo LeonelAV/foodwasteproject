@@ -2,8 +2,10 @@ angular.module('zeroWasteApp')
 .factory('ApiService', function($http){
 
   var getProducts = function() {
+    console.log("service!!")
     return $http.get('/api/products')
       .then(function(response){
+        console.log(response.data)
         return response.data
       })
   }

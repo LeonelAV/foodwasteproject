@@ -41,7 +41,7 @@
                             <label for="imageURL">Image URL</label>
                             <input ng-model="image" name="imageURL" type="text" class="form-control" id="input-code">
                         </div>
-                        <button  type="submit" class="btn btn-default">Submit</button>
+                        <button href="#!/products" type="submit" class="btn btn-default">Submit</button>
                     </form>
                 </div>
                 <!-- END panel-body -->
@@ -80,7 +80,7 @@
                                 <td>{{product.discount}}</td>
                                 <td>{{product.experyAt}}</td>
                                 <!-- <td><p><a href="#" class="btn btn-danger" role="button" ng-click="updateProduct(product._id)">Update</a></p></td> -->
-                                <td><p><a href="#" class="btn btn-danger" role="button" ng-click="removeProduct(product._id)">Remove</a></p></td>
+                                <td><p><a  class="btn btn-danger" role="button" ng-click="removeProduct(product._id)">Remove</a></p></td>
                                 
                             </tr>
                             <tr ng-repeat-end></tr>

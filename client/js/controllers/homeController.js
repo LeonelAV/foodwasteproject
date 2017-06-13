@@ -7,7 +7,7 @@ angular.module('zeroWasteApp')
       $scope.products = ApiService.getProducts()
       .then(function(response){
         $rootScope.products = response
-        console.log ($rootScope.products)
+        console.log (response)
       })
     $location.path('/products/')
     }

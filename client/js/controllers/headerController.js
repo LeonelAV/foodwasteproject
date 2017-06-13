@@ -6,4 +6,5 @@ angular.module('zeroWasteApp')
       console.log('Hello')
       $location.path('/login/')
     }
+
   })
