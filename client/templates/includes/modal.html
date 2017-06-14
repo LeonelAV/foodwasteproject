@@ -3,10 +3,11 @@
         <div class="modal-content details-modal">
             <h4>{{ product.shop.name}}</h4>
             <p>{{ product.shop.address }}</p>
-            <a id="shop-link" ng-click="getShop()" type="submit" data-dismiss="modal" class="page-scroll btn btn-xl"> See all products</a>
+            <p>{{product.shop._id}}</p>
+            <a id="shop-link" ng-click="getShop()" type="submit" data-dismiss="modal" class="page-scroll btn btn-xl value= {{product.shop._id}}"> See all products</a>
             <!-- <img src="img/mapa.png"> -->
             <div id="map">
-                <ng-map id="main-map" center="{{ product.shop.lat }}, {{ product.shop.lng }}" zoom="18">
+                <ng-map id="main-map" center="[{{ product.shop.lat }}, {{ product.shop.lng }}]" zoom="18">
                     <marker  class="map-icon map-icon-point-of-interest" animation="DROP" position="[{{ product.shop.lat }}, {{ product.shop.lng }}]"></marker>
                 </ng-map>
 

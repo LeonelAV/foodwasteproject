@@ -25,14 +25,16 @@
                                 <!-- /input-group -->
                             </div>
                             <div class="col-md-4">
-                                 <label for="idShop">ID</label>
-                                <div class="input-group" id="input-group-1">
+                                <label for="idShop">Shop Name</label>
+                                <!--  <div class="input-group" id="input-group-1">
                                     <input ng-model="shop" name="idShop" type="text" class="form-control" id="content-1">
-                                </div>
-                                <!-- <select  ng-model="idAlbumSelected" ng-change="albumSelection()">
-                                    <option ng-repeat="shop in shops" value="{{shop.id}}">{{shop.name}}</option>
-                                </select> -->
+                                </div> -->
+                                <select ng-model="shop">
+                                    <option ng-repeat="shop in shops" value="{{shop._id}}">{{shop.name}}</option>
+                                </select>
                                 <!-- /input-group -->
+
+            
                             </div>
                         </div>
                         <div class="form-group">
@@ -62,7 +64,22 @@
         </div>
         <!-- /.row -->
         </br>
+        <!-- <table ng-table="tableParams" class="table table-condensed table-bordered table-striped">
+       <tr ng-repeat="product in products">
+       <td data-title="'Image'">
+      <img width="50" ng-src="{{product.image}}" alt="" />
+    </td>
+    
+    <td data-title="'Name'" sortable="'name'">{{product.name}}</td>
+    <td data-title="'Price" sortable="'_id'">{{product.price}}</td>
+    <td data-title="'Discount'" sortable="'description'">{{product.discount}}</td>
+    <td data-title="'Expery At'" sortable="'description'">{{product.experyAt | date : shortDate}}</td>
+    <td data-title="'Actions'"><a class="btn btn-danger" role="button" ng-click="removeProduct(product._id)">Remove</a></td>
+
+  </tr>
+</table> -->
         <div style="height: 800px; overflow: auto">
+            <input type="text" class="form-control  uploadQuery" placeholder="Search your product" ng-model="queryUploaded">
             <table class="table" id="table">
                 <thead>
                     <tr>
@@ -74,14 +91,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat-start="product in allProducts">
+                    <tr ng-repeat-start="product in allProducts | filter: queryUploaded">
                         <form ng-submit="updateProduct()" role="form" id="productUpdate">
                             <td><img id="panel-image" src="{{product.image}}"></td>
                             <td>{{product.name}}</td>
                             <td>{{product.price}}</td>
                             <td>{{product.discount}}</td>
                             <td>{{product.experyAt | date : shortDate}}</td>
-                            <!-- <td><p><a href="#" class="btn btn-danger" role="button" ng-click="updateProduct(product._id)">Update</a></p></td> -->
+                            <td>
+                                <p><a href="#" class="btn btn-danger" role="button" ng-click="updateProduct(product._id)">Update</a></p>
+                            </td>
                             <td>
                                 <p><a class="btn btn-danger" role="button" ng-click="removeProduct(product._id)">Remove</a></p>
                             </td>

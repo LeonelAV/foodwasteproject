@@ -1,99 +1,33 @@
 <div class="shop-name">
     <p>PESCADOS SEPAL SL</p>
 </div>
-<div class="container">
-    <div class="row list-products-shop">
-        <div class="col-sm-4 col-lg-4 col-md-4">
-            <div class="thumbnail products">
-                <img class="discount" src="img/discount50.jpeg"></img>
-                <img src="img/boqueron-fresco.jpg" alt="">
-                <div class="caption">
-                    <h4 class="pull-right">{{products.price}}</h4>
-                    <h4><a href="#">Fresh fish</a>
-                                </h4>
-                    <p>Date of Expiry: 04/06/2017 <a target="_blank" href="http://www.bootsnipp.com">Pescados Sepal SL</a>.</p>
-                </div>
-                <div class="distance">
-                    <p>Distance: 600m</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-lg-4 col-md-4">
-            <div class="thumbnail products">
-                <img class="discount" src="img/discount50.jpeg"></img>
-                <img src="img/boqueron-fresco.jpg" alt="">
-                <div class="caption">
-                    <h4 class="pull-right">$24.99</h4>
-                    <h4><a href="#">Fresh fish</a>
-                                </h4>
-                    <p>Date of Expiry: 04/06/2017 <a target="_blank" href="http://www.bootsnipp.com">Pescados Sepal SL</a>.</p>
-                </div>
-                <div class="distance">
-                    <p>Distance: 600m</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-lg-4 col-md-4">
-            <div class="thumbnail products">
-                <img class="discount" src="img/discount50.jpeg"></img>
-                <img src="img/boqueron-fresco.jpg" alt="">
-                <div class="caption">
-                    <h4 class="pull-right">$24.99</h4>
-                    <h4><a href="#">Fresh fish</a>
-                                </h4>
-                    <p>Date of Expiry: 04/06/2017 <a target="_blank" href="http://www.bootsnipp.com">Pescados Sepal SL</a>.</p>
-                </div>
-                <div class="distance">
-                    <p>Distance: 600m</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-lg-4 col-md-4">
-            <div class="thumbnail products">
-                <img class="discount" src="img/discount50.jpeg"></img>
-                <img src="img/boqueron-fresco.jpg" alt="">
-                <div class="caption">
-                    <h4 class="pull-right">$24.99</h4>
-                    <h4><a href="#">Fresh fish</a>
-                                </h4>
-                    <p>Date of Expiry: 04/06/2017 <a target="_blank" href="http://www.bootsnipp.com">Pescados Sepal SL</a>.</p>
-                </div>
-                <div class="distance">
-                    <p>Distance: 600m</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-lg-4 col-md-4">
-            <div class="thumbnail products">
-                <img class="discount" src="img/discount50.jpeg"></img>
-                <img src="img/boqueron-fresco.jpg" alt="">
-                <div class="caption">
-                    <h4 class="pull-right">$24.99</h4>
-                    <h4><a href="#">Fresh fish</a>
-                                </h4>
-                    <p>Date of Expiry: 04/06/2017 <a target="_blank" href="http://www.bootsnipp.com">Pescados Sepal SL</a>.</p>
-                </div>
-                <div class="distance">
-                    <p>Distance: 600m</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-lg-4 col-md-4">
-            <div class="thumbnail products">
-                <img class="discount" src="img/discount50.jpeg"></img>
-                <img src="img/boqueron-fresco.jpg" alt="">
-                <div class="caption">
-                    <h4 class="pull-right">$24.99</h4>
-                    <h4><a href="#">Fresh fish</a>
-                                </h4>
-                    <p>Date of Expiry: 04/06/2017 <a target="_blank" href="http://www.bootsnipp.com">Pescados Sepal SL</a>.</p>
-                </div>
-                <div class="distance">
-                    <p>Distance: 600m</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
+<div class="col-md-9">
+        <p class="result-input">Searching for: {{query}}</p>
+       
+        <div id="products" class="list-products">
+            <ul class="list-unstyled list-products">
+                <li ng-repeat="product in allProducts | filter : {shop.id: '593bfe1142fd001cd834a04d'}" >
+                 <p>{{product.shop._id}}</p>
+                    <div class="thumbnail">
+                        <p>-{{ product.discount }}%</p>
+                        
+                        <img class="discount" src="img/plaindiscount.png"></img>
+                        <div class="container-image">
+                            <div class="img-bg" ng-style="{'background-image':'url({{product.image}})'}" ng-alt="{{ product.name }}">
+                                <div class="cover-hover">
+                                    <p><a data-toggle="modal" data-target="#modalProduct_{{ product._id }}"><i class="glyphicon glyphicon-zoom-in"></i></a></p>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <h4 class="pull-right">now {{ product.price*(1-(product.discount/100)) | number: 2  }}€</h4>
+                                <h4 class="price-review">{{product.price}}€</h4>
+                                <h5 id="name"> {{ product.name }}</h5>
+                                <p>Expery at: {{ product.experyAt | date : shortDate }}</p>
+                               <!--  <h6 id="distance">Distance: 600m</h6> -->
+                               <!--  <p>{{ product.shop.lat}}</p>
+                                <p>{{ product.shop.lng}}</p> -->
+                                <h5 id="shopName">{{ product.shop.name}}</h5>
+                                <p>{{ product.shop.address }}</p>
+                                <!-- <p><a class="btn btn-danger" role="button" ng-click="removeProduct(product._id)">Remove</a></p> -->
+                            </div>
+                        </div>

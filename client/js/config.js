@@ -25,7 +25,7 @@ angular.module('zeroWasteApp')
       })
       .when('/uploadShop', {
         templateUrl: 'templates/uploadShop.html',
-        controller: 'uploadController'
+        controller: 'shopsController'
       })
       
   })

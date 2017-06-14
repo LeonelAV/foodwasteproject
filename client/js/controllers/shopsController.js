@@ -1,13 +1,31 @@
 angular.module('zeroWasteApp')
-  .controller('shopsController', function ($scope, $rootScope, $location, ApiService) {
-    $rootScope.section = 'shops'
+    .controller('shopsController', function($scope, $rootScope, $location, ApiService) {
+        $rootScope.section = 'shops'
 
-    $scope.getShops = function(){
-      $scope.shops = ApiService.getShops()
-      .then(function(response){
-        $rootScope.shops = response
-        console.log ($rootScope.shops)
-      })
 
-    }
-  })
+        $scope.addShop = function() {
+
+            const { name, category, image, address, lat, lng } = $scope
+            //console.log({ name, category, image, address, lat, lng })
+
+            ApiService.addShop({ name, category, image, address, lat, lng })
+                .then(console.log)
+            $location.path('/uploadProducts/')
+        }
+
+
+
+        $scope.getCoordenates = function() {
+            const { address } = $scope
+            $scope.info = 'your address is now validated'
+
+            ApiService.getCoordenates(address)
+                .then(function(response) {
+                    $scope.lat = response.lat
+                    $scope.lng = response.lng
+                    return $scope.lat, $scope.lng
+                })
+        }
+
+
+    })
