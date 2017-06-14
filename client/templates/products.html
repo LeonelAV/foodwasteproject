@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" data-ng-init="getProducts()">
     <div class="list-categories col-md-3">
         <div class="input-group">
             <input type="text" class="form-control" placeholder="Search for..." ng-model="query">
@@ -27,7 +27,7 @@
         <p class="result-input">Searching for: {{query}}</p>
         <div id="products" class="list-products">
             <ul class="list-unstyled list-products">
-                <li ng-repeat="product in allProducts | filter: query">
+                <li ng-repeat="product in allProducts | filter: query" >
                     <div class="thumbnail">
                         <p>-{{ product.discount }}%</p>
                         <img class="discount" src="img/plaindiscount.png"></img>
@@ -41,11 +41,12 @@
                                 <h4 class="pull-right">now {{ product.price*(1-(product.discount/100)) | number: 2  }}€</h4>
                                 <h4 class="price-review">{{product.price}}€</h4>
                                 <h5 id="name"> {{ product.name }}</h5>
-                                <p>Expery at: {{ product.experyAt}}</p>
-                                <h6 id="distance">Distance: 600m</h6>
-                                <p>{{ product.shop.lat}}</p>
-                                <p>{{ product.shop.lng}}</p>
-                                <p>{{ product.shop.name}}</p>
+                                <p>Expery at: {{ product.experyAt | date : shortDate }}</p>
+                               <!--  <h6 id="distance">Distance: 600m</h6> -->
+                               <!--  <p>{{ product.shop.lat}}</p>
+                                <p>{{ product.shop.lng}}</p> -->
+                                <h5 id="shopName">{{ product.shop.name}}</h5>
+                                <p>{{ product.shop.address }}</p>
                                 <!-- <p><a class="btn btn-danger" role="button" ng-click="removeProduct(product._id)">Remove</a></p> -->
                             </div>
                         </div>
@@ -63,6 +64,7 @@
                             </div> -->
                         <div ng-include="'templates/includes/modal.html'"></div>
                 </li>
+                
             </ul>
             </div>
         </div>

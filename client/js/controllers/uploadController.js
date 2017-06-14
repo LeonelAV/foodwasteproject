@@ -6,7 +6,7 @@ angular.module('zeroWasteApp')
             const products = {name, image, price, experyAt }
             ApiService.addProduct({ name, category, image, price, discount, experyAt, shop })
                 .then(console.log(products))
-                $location.path( "/products" )
+                  allProductsToScope()
         }
         $scope.addShop = function() {
 
@@ -14,13 +14,21 @@ angular.module('zeroWasteApp')
             console.log({ name, category, image, address, lat, lng })
             ApiService.addShop({ name, category, image, address, lat, lng })
                 .then(console.log)
+                $location.path('/uploadProducts/')
         }
 
      $scope.removeProduct = function(id) {
        ApiService.removeProduct(id)
       .then(console.log)
-       $location.path( "/products" )
+       allProductsToScope()
     }
+
+    function allProductsToScope() {
+      ApiService.getProducts()
+      .then(function(response){
+        $rootScope.allProducts = response
+      })
+  }
 
     // $scope.getDistanceBetween = function() {
     //   const address1  = 'Carreras y Candi, Barcelona'

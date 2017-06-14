@@ -1,6 +1,16 @@
 angular.module('zeroWasteApp')
-  .controller('productsController', function ($scope, $location, ApiService) {
+  .controller('productsController', function ($scope, $rootScope, $location, ApiService) {
     $scope.title = 'PRODUCTS'
+
+    $scope.getProducts = function(){
+      //console.log('show something')
+      $rootScope.allProducts = ApiService.getProducts()
+      .then(function(response){
+        $rootScope.allProducts = response
+      })
+    }
+
+
 
     $scope.getShop = function () {
       // var codeLocation = $scope.queryLocation.split(':')[0]

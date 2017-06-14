@@ -1,4 +1,4 @@
-#map > * {
+#main > * {
   margin-top: 60px;
   margin: 0px;
   position: relative;
@@ -6,3 +6,13 @@
   height: 60vh;
   width: 100%; 
 }
+
+.details-modal > h4 {
+  text-align: center;
+}
+
+#shop-link {
+  padding: 0 0;
+font-size: 20px;
+}
+
