@@ -21,19 +21,18 @@
                         </div>
                         <div class="form-group">
                             <label for="shopCategory">Shop Category</label>
-                           <!--  <input ng-model="category" name="shopCategory" type="text" class="form-control" id="input-code"> -->
-                           <select class="input-lg" ng-model="category">
-                        <option name="shopAddress">supermaket</option>
-                         <option name="shopAddress">fishShop</option>
-                          <option name="shopAddress">bakery</option>
-                           <option name="shopAddress">butchery</option>
-                    </select>
+                            <!--  <input ng-model="category" name="shopCategory" type="text" class="form-control" id="input-code"> -->
+                            <select class="input" ng-model="category">
+                                <option name="shopAddress">supermaket</option>
+                                <option name="shopAddress">fishShop</option>
+                                <option name="shopAddress">bakery</option>
+                                <option name="shopAddress">butchery</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="shopAddress">Address</label>
                             <input ng-model="address" name="shopAddress" type="text" class="form-control" id="input-code">
-                       
-                    </div>
+                        </div>
                         <!--  Get the coordenates -->
                         <div class=" form-group">
                             <label for="shopCord">Address</label>
@@ -53,7 +52,7 @@
                                 <input ng-model="image" name="imageProduct" type="file" id="exampleInputFile">
                                 <p class="help-block">.jpg, .gif, .png</p>
                             </div> -->
-                <button  ng-click="addShop()" type="submit" class="btn btn-default">Submit</button>
+                <button ng-click="addShop()" type="submit" class="btn btn-default">Submit</button>
                 </form>
             </div>
             <!-- END panel-body -->

@@ -10,9 +10,13 @@ angular.module('zeroWasteApp')
       })
     }
 
+    // $scope.myFilter = function() {
+
+    // }
 
 
     $scope.getShop = function () {
+      console.log($scope.shopId)
       // var codeLocation = $scope.queryLocation.split(':')[0]
       $location.path('/shops/')
     }

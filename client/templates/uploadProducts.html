@@ -1,3 +1,4 @@
+
 <div class="container form-index" data-ng-init="getProducts()">
     <div class="row">
         <div class="panel-group">
@@ -33,8 +34,6 @@
                                     <option ng-repeat="shop in shops" value="{{shop._id}}">{{shop.name}}</option>
                                 </select>
                                 <!-- /input-group -->
-
-            
                             </div>
                         </div>
                         <div class="form-group">
@@ -48,22 +47,14 @@
                         <button href="#!/products" type="submit" class="btn btn-default">Submit</button>
                     </form>
                 </div>
-                <!-- END panel-body -->
             </div>
         </div>
     </div>
-    <!-- admin panel-->
 </div>
 <div class='main-panel'>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <button type="button" class="btn btn-primary"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ADD PRODUCTS </button>
-            </div>
-            <!-- /.col-lg-6 -->
-        </div>
+        
         <!-- /.row -->
-        </br>
         <!-- <table ng-table="tableParams" class="table table-condensed table-bordered table-striped">
        <tr ng-repeat="product in products">
        <td data-title="'Image'">
@@ -99,7 +90,6 @@
                             <td>{{product.discount}}</td>
                             <td>{{product.experyAt | date : shortDate}}</td>
                             <td>
-                                <p><a href="#" class="btn btn-danger" role="button" ng-click="updateProduct(product._id)">Update</a></p>
                             </td>
                             <td>
                                 <p><a class="btn btn-danger" role="button" ng-click="removeProduct(product._id)">Remove</a></p>

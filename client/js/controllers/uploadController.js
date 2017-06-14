@@ -8,6 +8,12 @@ angular.module('zeroWasteApp')
                 console.log($rootScope.shops)
             })
 
+        ApiService.getProducts()
+      .then(function(response){
+        $rootScope.allProducts = response
+      })
+
+
         $scope.addProduct = function() {
             const { name, category, image, price, discount, experyAt, shop } = $scope
             const products = { name, image, price, experyAt }
@@ -23,6 +29,7 @@ angular.module('zeroWasteApp')
                 .then(console.log)
             allProductsToScope()
         }
+
 
         function allProductsToScope() {
             ApiService.getProducts()
