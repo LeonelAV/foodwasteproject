@@ -7,6 +7,14 @@ angular.module('zeroWasteApp')
         return response.data
       })
   }
+
+  var getProductsFromId = function(id) {
+    return $http.get('/api/products/${id}')
+      .then(function(response){
+        return response.data
+      })
+  }
+
   var addProduct = function(data) {
     return $http.post('/api/products', data)
       .then(function(response){
@@ -59,7 +67,8 @@ angular.module('zeroWasteApp')
     getShops: getShops,
     addShop: addShop,
     getCoordenates: getCoordenates,
-    getDistanceBetween: getDistanceBetween
+    getDistanceBetween: getDistanceBetween,
+    getProductsFromId: getProductsFromId
 
   }
 })

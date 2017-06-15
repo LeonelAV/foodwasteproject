@@ -1,7 +1,7 @@
 angular.module('zeroWasteApp')
     .controller('uploadController', function($scope, $rootScope, $location, ApiService, toastr) {
         $rootScope.section = 'upload'
-        
+
         $rootScope.shops = ApiService.getShops()
             .then(function(response) {
                 $rootScope.shops = response
@@ -9,9 +9,9 @@ angular.module('zeroWasteApp')
             })
 
         ApiService.getProducts()
-      .then(function(response){
-        $rootScope.allProducts = response
-      })
+            .then(function(response) {
+                $rootScope.allProducts = response
+            })
 
 
         $scope.addProduct = function() {
@@ -19,19 +19,19 @@ angular.module('zeroWasteApp')
             const products = { name, image, price, experyAt }
             ApiService.addProduct({ name, category, image, price, discount, experyAt, shop })
                 .then(msg => {
-        toastr.success('check your list', 'Product Created!' )
-    })
+                    toastr.success('check your list', 'Product Created!')
+                })
             allProductsToScope()
         }
 
-       
+
 
         $scope.removeProduct = function(id) {
             ApiService.removeProduct(id)
                 .then(msg => {
-        toastr.error('Product Removed!', msg )
-            allProductsToScope()
-        })
+                    toastr.error('Product Removed!', msg)
+                    allProductsToScope()
+                })
         }
 
 
@@ -42,22 +42,6 @@ angular.module('zeroWasteApp')
                 })
         }
 
-
-
-        // $scope.getDistanceBetween = function() {
-        //   const address1  = 'Carreras y Candi, Barcelona'
-        //   const address2 = 'Plaça Reial, Barcelona '
-        //   ApiService.getDistanceBetween(address1, address2)
-        //             .then(function(response){
-        //                 console.log(response)
-        //             })
-        //     }
-
-
-
-        // ****product/shop coordenates****
-
-       
 
         // ***user coordenates *****
         const geo = document.getElementById("demo");

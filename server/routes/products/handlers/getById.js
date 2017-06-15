@@ -1,12 +1,16 @@
 const Product = require(__base + 'models/product')
 
-function getById(req, res) {
+function getById (req,res) {
 
-  Product.find({})
-        .populate('shop')
-        .exec(function(err, product) {
-	      res.json( product)
-	  })
+  const { id } = req.params
+  const { projection } = req
+
+  Product
+    .findById(id , projection)
+    .then( products => {
+      res.json(products)
+    })
+
 }
 
-module.exports = getAll
+module.exports = getById

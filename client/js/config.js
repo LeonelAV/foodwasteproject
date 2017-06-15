@@ -2,8 +2,7 @@ angular.module('zeroWasteApp')
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'templates/home.html',
-        controller: 'homeController'
+        templateUrl: 'templates/home.html'
       })
       .when('/products', {
         templateUrl: 'templates/products.html',

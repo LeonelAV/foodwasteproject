@@ -3,22 +3,22 @@ angular.module('zeroWasteApp')
     $scope.title = 'PRODUCTS'
 
     $scope.getProducts = function(){
-      //console.log('show something')
       $rootScope.allProducts = ApiService.getProducts()
       .then(function(response){
         $rootScope.allProducts = response
-      })
+    })
+}
+
+
+    $scope.getProductsFromId = function(id){
+      console.log('id shop => ' +id)
+      $rootScope.shopId = id
     }
-
-    // $scope.myFilter = function() {
-
-    // }
-
 
     $scope.getShop = function () {
-
-      $location.path('/shops/')
+       $location.path('/shops')
     }
+
     $scope.supermaket= "supermaket"
     $scope.showQuery = function() {
       $scope.query="supermaket"

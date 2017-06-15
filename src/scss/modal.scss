@@ -16,3 +16,15 @@
 font-size: 20px;
 }
 
+#modal-link {
+  background-color: #FECA1C;
+}
+
+  #modal-link:hover {
+  background-color: #ffd754;
+  cursor: pointer;
+  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+}

@@ -34,7 +34,7 @@
                         <div class="container-image">
                             <div class="img-bg" ng-style="{'background-image':'url({{product.image}})'}" ng-alt="{{ product.name }}">
                                 <div class="cover-hover">
-                                    <p><a data-toggle="modal" data-target="#modalProduct_{{ product._id }}"><i class="glyphicon glyphicon-zoom-in"></i></a></p>
+                                    <p><a data-toggle="modal"  data-target="#modalProduct_{{ product._id }}"><i class="glyphicon glyphicon-zoom-in" ng-click="getProductsFromId(product.shop._id)"></i></a></p>
                                 </div>
                             </div>
                             <div class="caption">
