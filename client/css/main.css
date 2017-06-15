@@ -974,6 +974,12 @@ select {
 .uploadQuery {
   margin-bottom: 20px; }
 
+.panel-heading {
+  font-size: 20px; }
+
+.valid-btn {
+  margin-top: 25px; }
+
 .main-panel {
   margin-top: 150px; }
 

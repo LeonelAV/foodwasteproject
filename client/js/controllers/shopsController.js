@@ -1,5 +1,5 @@
 angular.module('zeroWasteApp')
-    .controller('shopsController', function($scope, $rootScope, $location, ApiService) {
+    .controller('shopsController', function ($scope, $rootScope, $location, ApiService) {
         $rootScope.section = 'shops'
 
 

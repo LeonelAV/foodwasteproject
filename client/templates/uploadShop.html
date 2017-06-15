@@ -29,34 +29,38 @@
                                 <option name="shopAddress">butchery</option>
                             </select>
                         </div>
+                        <div class="row">
+                            <div class="col-md-9 form-group">
+                                <label for="shopAddress">Address</label>
+                                <input ng-model="address" name="shopAddress" type="text" class="form-control" id="input-code" placeholder="street, city" required>
+                                <p>{{info}}</p>
+                            </div>
+                            <!--  Get the coordenates -->
+                            <div class=" hidden form-group">
+                                <label for="shopCord">Address</label>
+                                <input ng-model="address" name="shopCord" type="text" class="form-control" id="input-code" >
+                                <input ng-value="{{ lat }}" ng-model="lat" required>
+                                <input ng-value="{{ lng }}" ng-model="lng" required>
+                            </div>
+                            <div class="col-md-3">
+                                <p><button class="valid-btn btn" role="button" ng-click="getCoordenates()">Validate Your address</button></p>
+                            </div>
+                            
+                        </div>
                         <div class="form-group">
-                            <label for="shopAddress">Address</label>
-                            <input ng-model="address" name="shopAddress" type="text" class="form-control" id="input-code">
+                            <label for="imageShop">Image URL</label>
+                            <input ng-model="imageShop" name="imageShop" type="text" class="form-control" id="input-code">
                         </div>
-                        <!--  Get the coordenates -->
-                        <div class=" form-group">
-                            <label for="shopCord">Address</label>
-                            <input ng-model="address" name="shopCord" type="text" class="form-control" id="input-code">
-                            <input ng-value="{{ lat }}" ng-model="lat" required>
-                            <input ng-value="{{ lng }}" ng-model="lng" required>
-                        </div>
-                        <p><a class="btn btn-danger" role="button" ng-click="getCoordenates()">Validate Your address</a></p>
-                        <p>{{info}}</p>
-                </div>
-                <div class="form-group">
-                    <label for="imageShop">Image URL</label>
-                    <input ng-model="imageShop" name="imageShop" type="text" class="form-control" id="input-code">
-                </div>
-                <!--                             <div class="form-group">
+                        <!--                             <div class="form-group">
                                 <label for="imageProduct">Image of the product</label>
                                 <input ng-model="image" name="imageProduct" type="file" id="exampleInputFile">
                                 <p class="help-block">.jpg, .gif, .png</p>
                             </div> -->
-                <button ng-click="addShop()" type="submit" class="btn btn-default">Submit</button>
-                </form>
+                        <button ng-click="addShop()" type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+                <!-- END panel-body -->
             </div>
-            <!-- END panel-body -->
         </div>
     </div>
-</div>
 </div>
