@@ -4,7 +4,7 @@
             <h4>{{ product.shop.name}}</h4>
             <p>{{ product.shop.address }}</p>
             <p>{{product.shop._id}}</p>
-            <button><a id="shop-link" ng-click="getShop()" type="submit" data-dismiss="modal" class="page-scroll btn btn-xl" ng-model="shopId" value= "{{product.shop._id}}"> See all products</a></button>
+            <a id="shop-link" ng-click="getShop()" type="button" data-dismiss="modal" class="page-scroll btn btn-xl" ng-model="shopId" value= "{{product.shop._id}}"> See all products</a>
             <!-- <img src="img/mapa.png"> -->
             <div id="map">
                 <ng-map id="main-map" center="[{{ product.shop.lat }}, {{ product.shop.lng }}]" zoom="18">

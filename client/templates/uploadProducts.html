@@ -1,5 +1,4 @@
-
-<div class="container form-index" >
+<div class="container form-index">
     <div class="row">
         <div class="panel-group">
             <div class="panel panel-default">
@@ -53,7 +52,6 @@
 </div>
 <div class='main-panel'>
     <div class="container">
-        
         <!-- /.row -->
         <!-- <table ng-table="tableParams" class="table table-condensed table-bordered table-striped">
        <tr ng-repeat="product in products">
@@ -69,8 +67,11 @@
 
   </tr>
 </table> -->
+            <h3 id="prod-list" class="container"> List of products: </h3>
+            <div class="row">
+            <input type="text" class="col-xs-offset-3 col-xs-6 col-xs-offset-3form-control  uploadQuery" placeholder="Search your product" ng-model="queryUploaded">
+</div>
         <div style="height: 800px; overflow: auto">
-            <input type="text" class="form-control  uploadQuery" placeholder="Search your product" ng-model="queryUploaded">
             <table class="table" id="table">
                 <thead>
                     <tr>

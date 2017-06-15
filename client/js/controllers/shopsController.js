@@ -1,5 +1,5 @@
 angular.module('zeroWasteApp')
-    .controller('shopsController', function ($scope, $rootScope, $location, ApiService) {
+    .controller('shopsController', function ($scope, $rootScope, $location, ApiService, toastr) {
         $rootScope.section = 'shops'
 
 
@@ -9,7 +9,9 @@ angular.module('zeroWasteApp')
             //console.log({ name, category, image, address, lat, lng })
 
             ApiService.addShop({ name, category, image, address, lat, lng })
-                .then(console.log)
+                .then(msg => {
+        toastr.success('Upload products in your shop', 'Shop Created!' )
+    })
             $location.path('/uploadProducts/')
         }
 

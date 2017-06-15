@@ -3,7 +3,8 @@
 }
 
 .uploadQuery {
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .panel-heading {
@@ -12,4 +13,18 @@
 
 .valid-btn {
   margin-top: 25px;
+}
+
+.main-panel {
+  margin-top: 30px;
+}
+
+#panel-image {
+  width:50px;
+}
+
+#prod-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }

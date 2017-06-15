@@ -16,8 +16,7 @@ angular.module('zeroWasteApp')
 
 
     $scope.getShop = function () {
-      console.log($scope.shopId)
-      // var codeLocation = $scope.queryLocation.split(':')[0]
+
       $location.path('/shops/')
     }
     $scope.supermaket= "supermaket"
