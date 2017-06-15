@@ -1,1 +1,1 @@
-angular.module('zeroWasteApp', ['ngRoute', 'ngMap', 'toastr'])
+angular.module('zeroWasteApp', ['ngRoute', 'ngMap', 'toastr', 'google.places'])

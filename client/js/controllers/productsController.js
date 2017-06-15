@@ -10,10 +10,10 @@ angular.module('zeroWasteApp')
 }
 
 
-    $scope.getProductsFromId = function(id){
-      console.log('id shop => ' +id)
-      $rootScope.shopId = id
-    }
+    // $scope.getProductsFromId = function(id){
+    //   console.log('id shop => ' +id)
+    //   $rootScope.shopId = id
+    // }
 
     $scope.getShop = function () {
        $location.path('/shops')
