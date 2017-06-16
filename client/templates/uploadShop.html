@@ -25,8 +25,8 @@
                                 <p>{{info}}</p>
                             </div>
                             <!--  Get the coordenates -->
-                            <div class=" form-group">
-                                <label for="shopCord">Address</label>
+                            <div class="hidden form-group">
+                                <label for="shopCord" required>Address</label>
                                 <input ng-model="address" name="shopCord" type="text" class=" form-control" id="input-code" required>
                                 <input ng-value="{{ lat }}" ng-model="lat">
                                 <input ng-value="{{ lng }}" ng-model="lng">
