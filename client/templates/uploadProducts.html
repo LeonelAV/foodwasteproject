@@ -13,7 +13,7 @@
                             <div class="col-md-4">
                                 <label for="priceProduct">Price</label>
                                 <div class="input-group" id="input-group-1">
-                                    <input ng-model="price" name="priceProduct" type="number" class="form-control" id="content-1">
+                                    <input ng-model="price" name="priceProduct" type="number" class="form-control" id="content-1" step=".01">
                                 </div>
                                 <!-- /input-group -->
                             </div>
@@ -26,9 +26,6 @@
                             </div>
                             <div class="col-md-4">
                                 <label for="idShop">Shop Name</label>
-                                <!--  <div class="input-group" id="input-group-1">
-                                    <input ng-model="shop" name="idShop" type="text" class="form-control" id="content-1">
-                                </div> -->
                                 <select ng-model="shop">
                                     <option ng-repeat="shop in shops" value="{{shop._id}}">{{shop.name}}</option>
                                 </select>
@@ -52,25 +49,10 @@
 </div>
 <div class='main-panel'>
     <div class="container">
-        <!-- /.row -->
-        <!-- <table ng-table="tableParams" class="table table-condensed table-bordered table-striped">
-       <tr ng-repeat="product in products">
-       <td data-title="'Image'">
-      <img width="50" ng-src="{{product.image}}" alt="" />
-    </td>
-    
-    <td data-title="'Name'" sortable="'name'">{{product.name}}</td>
-    <td data-title="'Price" sortable="'_id'">{{product.price}}</td>
-    <td data-title="'Discount'" sortable="'description'">{{product.discount}}</td>
-    <td data-title="'Expery At'" sortable="'description'">{{product.experyAt | date : shortDate}}</td>
-    <td data-title="'Actions'"><a class="btn btn-danger" role="button" ng-click="removeProduct(product._id)">Remove</a></td>
-
-  </tr>
-</table> -->
-            <h3 id="prod-list" class="container"> List of products: </h3>
-            <div class="row">
+        <h3 id="prod-list" class="container"> List of products: </h3>
+        <div class="row">
             <input type="text" class="col-xs-offset-3 col-xs-6 col-xs-offset-3form-control  uploadQuery" placeholder="Search your product" ng-model="queryUploaded">
-</div>
+        </div>
         <div style="height: 800px; overflow: auto">
             <table class="table" id="table">
                 <thead>

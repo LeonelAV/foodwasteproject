@@ -9,23 +9,23 @@
  'use strict';
 
 angular.module('google.places', [])
-  /**
-   * DI wrapper around global google places library.
-   *
-   * Note: requires the Google Places API to already be loaded on the page.
-   */
-  .factory('googlePlacesApi', ['$window', function ($window) {
+	/**
+	 * DI wrapper around global google places library.
+	 *
+	 * Note: requires the Google Places API to already be loaded on the page.
+	 */
+	.factory('googlePlacesApi', ['$window', function ($window) {
         if (!$window.google) throw 'Global `google` var missing. Did you forget to include the places API script?';
 
-    return $window.google;
-  }])
+		return $window.google;
+	}])
 
-  /**
-   * Autocomplete directive. Use like this:
-   *
-   * <input type="text" g-places-autocomplete ng-model="myScopeVar" />
-   */
-  .directive('gPlacesAutocomplete',
+	/**
+	 * Autocomplete directive. Use like this:
+	 *
+	 * <input type="text" g-places-autocomplete ng-model="myScopeVar" />
+	 */
+	.directive('gPlacesAutocomplete',
         [ '$parse', '$compile', '$timeout', '$document', 'googlePlacesApi',
         function ($parse, $compile, $timeout, $document, google) {
 
@@ -86,10 +86,6 @@ angular.module('google.places', [])
 
                         $drawer = $compile(drawerElement)($scope);
                         body.append($drawer);  // Append to DOM
-
-                        $scope.$on('$destroy', function() {
-                            $drawer.remove();
-                        });
                     }
 
                     function initNgModelController() {
@@ -127,7 +123,7 @@ angular.module('google.places', [])
                             $scope.$apply(function () {
                                 event.stopPropagation();
                                 clearPredictions();
-                            });
+                            })
                         }
                     }
 
@@ -160,7 +156,7 @@ angular.module('google.places', [])
                                 $scope.model = prediction.place;
                                 $scope.$emit('g-places-autocomplete:select', prediction.place);
                                 $timeout(function () {
-                                    controller.$viewChangeListeners.forEach(function (fn) { fn(); });
+                                    controller.$viewChangeListeners.forEach(function (fn) {fn()});
                                 });
                             });
                         } else {
@@ -170,7 +166,7 @@ angular.module('google.places', [])
                                         $scope.model = place;
                                         $scope.$emit('g-places-autocomplete:select', place);
                                         $timeout(function () {
-                                            controller.$viewChangeListeners.forEach(function (fn) { fn(); });
+                                            controller.$viewChangeListeners.forEach(function (fn) {fn()});
                                         });
                                     });
                                 }
@@ -312,7 +308,7 @@ angular.module('google.places', [])
                     function indexOf(array, item) {
                         var i, length;
 
-                        if (array === null) return -1;
+                        if (array == null) return -1;
 
                         length = array.length;
                         for (i = 0; i < length; i++) {
@@ -326,10 +322,10 @@ angular.module('google.places', [])
                     }
 
                     function toLower(string) {
-                        return (string === null) ? "" : string.toLowerCase();
+                        return (string == null) ? "" : string.toLowerCase();
                     }
                 }
-            };
+            }
         }
     ])
 
@@ -363,7 +359,7 @@ angular.module('google.places', [])
                     $scope.$apply(function () {
                         $scope.position = getDrawerPosition($scope.input);
                     });
-                };
+                }
 
                 $scope.isOpen = function () {
                     return $scope.predictions.length > 0;
@@ -401,7 +397,7 @@ angular.module('google.places', [])
                     };
                 }
             }
-        };
+        }
     }])
 
     .directive('gPlacesAutocompletePrediction', [function () {
@@ -420,7 +416,7 @@ angular.module('google.places', [])
                 query:'='
             },
             template: TEMPLATE.join('')
-        };
+        }
     }])
 
     .filter('highlightMatched', ['$sce', function ($sce) {
@@ -436,7 +432,7 @@ angular.module('google.places', [])
             }
 
             return $sce.trustAsHtml('<span class="pac-matched">' + matchedPortion + '</span>' + unmatchedPortion);
-        };
+        }
     }])
 
     .filter('unmatchedTermsOnly', [function () {
@@ -451,11 +447,13 @@ angular.module('google.places', [])
             }
 
             return filtered;
-        };
+        }
     }])
 
     .filter('trailingComma', [function () {
         return function (input, condition) {
             return (condition) ? input + ',' : input;
-        };
+        }
     }]);
+
+

@@ -19,14 +19,14 @@
         <p class="result-input">Searching for: {{query}}</p>
         <div id="products" class="list-products">
             <ul class="list-unstyled list-products">
-                <li ng-repeat="product in allProducts | filter: query" >
+                <li ng-repeat="product in allProducts | filter: query">
                     <div class="thumbnail">
                         <p>-{{ product.discount }}%</p>
                         <img class="discount" src="img/plaindiscount.png"></img>
                         <div class="container-image">
                             <div class="img-bg" ng-style="{'background-image':'url({{product.image}})'}" ng-alt="{{ product.name }}">
-                               <div class="cover-hover">
-                                    <p><a data-toggle="modal"  data-target="#modalProduct_{{ product._id }}"><i class="glyphicon glyphicon-zoom-in" ng-click="getProductsFromId(product.shop._id)"></i></a></p>
+                                <div class="cover-hover">
+                                    <p><a data-toggle="modal" data-target="#modalProduct_{{ product._id }}"><i class="glyphicon glyphicon-zoom-in" ng-click="getProductsFromId(product.shop._id)"></i></a></p>
                                 </div>
                             </div>
                             <div class="caption">
@@ -34,29 +34,16 @@
                                 <h4 class="price-review">{{product.price}}€</h4>
                                 <h5 id="name"> {{ product.name }}</h5>
                                 <p>Expery at: {{ product.experyAt | date : shortDate }}</p>
-                               <!--  <h6 id="distance">Distance: 600m</h6> -->
-                               <!--  <p>{{ product.shop.lat}}</p>
+                                <!--  <h6 id="distance">Distance: 600m</h6> -->
+                                <!--  <p>{{ product.shop.lat}}</p>
                                 <p>{{ product.shop.lng}}</p> -->
-                                <h5 id="shopName">{{ product.shop.name}}</h5>
+                                <h5 id="shop-name">{{ product.shop.name}}</h5>
                                 <p>{{ product.shop.address }}</p>
                                 <!-- <p><a class="btn btn-danger" role="button" ng-click="removeProduct(product._id)">Remove</a></p> -->
                             </div>
                         </div>
-                        <!-- <div class="thumbnail products">
-                                <img class="discount" src="img/discount50.jpeg"></img>
-                                <img class="product-img" src="{{ product.image }}" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">{{ product.price/(100/product.discount)}}€</h4>
-                                    <h4 class="price-review">{{product.price}}€</h4>
-                                    <h3> {{ product.name }}</h3>
-                                    <p>Expery at: {{ product.experyAt}}</p>
-                                    <h5>Distance: 600m</h5>
-                                    <p>{{ product.shop }}</p>
-                                </div>
-                            </div> -->
                         <div ng-include="'templates/includes/modal.html'"></div>
                 </li>
-                
             </ul>
             </div>
         </div>

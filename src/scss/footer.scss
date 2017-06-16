@@ -1,0 +1,27 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer-view {
+	color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background: #333333
+}
+
+li.admin a, li.admin:hover a, .navbar.admin {
+	background: red !important;
+	color: white !important;
+}
+
+.ingredient-panel {
+	margin: 30px;
+}

@@ -9,8 +9,8 @@ angular.module('zeroWasteApp')
         controller: 'productsController'
       })
       .when('/shops', {
-        templateUrl: 'templates/shops.html'
-        // controller: 'productsController'
+        templateUrl: 'templates/shops.html',
+        controller: 'shopsController'
       })
       .when('/login', {
         templateUrl: 'templates/login.html'

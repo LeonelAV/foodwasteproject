@@ -943,7 +943,7 @@ select {
   transform: rotate(-8deg); }
 
 #shop-name {
-  justify-content: center; }
+  text-align: center; }
 
 #products {
   padding-left: 10px; }
@@ -967,6 +967,9 @@ select {
 
 .list-products-shop {
   margin-top: 50px; }
+
+#shop-prd {
+  margin-right: 40px !important; }
 
 .form-index {
   margin-top: 150px; }
@@ -992,11 +995,7 @@ select {
   justify-content: center;
   margin-bottom: 20px; }
 
-#main > * {
-  margin-top: 60px;
-  margin: 0px;
-  position: relative;
-  position: fixed;
+#main-map {
   height: 60vh;
   width: 100%; }
 
@@ -1017,3 +1016,27 @@ select {
   -moz-transition: background-color 1s ease-out;
   -o-transition: background-color 1s ease-out;
   transition: background-color 1s ease-out; }
+
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px; }
+
+.footer-view {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background: #333333; }
+
+li.admin a, li.admin:hover a, .navbar.admin {
+  background: red !important;
+  color: white !important; }
+
+.ingredient-panel {
+  margin: 30px; }

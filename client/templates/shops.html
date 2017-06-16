@@ -1,28 +1,33 @@
 <div class="shop-name">
-    <p>PESCADOS SEPAL SL</p>
+    <ul class="list-unstyled">
+        <li ng-repeat="shop in allShops">
+        </li>
+        <h4> Check all of our products </h4>
+    </ul>
 </div>
-
-        <p class="result-input">Searching for: {{query}}</p>
-        <div id="products" class="list-products">
-       
-            <ul class="list-unstyled list-products">
-                <li ng-repeat="product in allProducts | filter: {shop: {_id: shopId}}" >
-                    <div class="thumbnail">
-                        <p>-{{ product.discount }}%</p>
-                        <img class="discount" src="img/plaindiscount.png"></img>
-                        <div class="container-image">
-                            <div class="img-bg" ng-style="{'background-image':'url({{product.image}})'}" ng-alt="{{ product.name }}">
-                            </div>
-                            <div class="caption">
-                                <h4 class="pull-right">now {{ product.price*(1-(product.discount/100)) | number: 2  }}€</h4>
-                                <h4 class="price-review">{{product.price}}€</h4>
-                                <h5 id="name"> {{ product.name }}</h5>
-                                <p>Expery at: {{ product.experyAt | date : shortDate }}</p>
-                               <!--  <h6 id="distance">Distance: 600m</h6> -->
-                               <!--  <p>{{ product.shop.lat}}</p>
-                                <p>{{ product.shop.lng}}</p> -->
-                                <h5 id="shopName">{{ product.shop.name}}</h5>
-                                <p>{{ product.shop.address }}</p>
-                                <!-- <p><a class="btn btn-danger" role="button" ng-click="removeProduct(product._id)">Remove</a></p> -->
-                            </div>
+<div class="container">
+    <p class="result-input"></p>
+    <div id="products" class="list-products">
+        <ul class="list-unstyled list-products">
+            <li id="shop-prd" ng-repeat="product in allProducts | filter: {shop: {_id: shopId}}">
+                <div class="thumbnail">
+                    <p>-{{ product.discount }}%</p>
+                    <img class="discount" src="img/plaindiscount.png"></img>
+                    <div class="container-image">
+                        <div class="img-bg" ng-style="{'background-image':'url({{product.image}})'}" ng-alt="{{ product.name }}">
                         </div>
+                        <div class="caption">
+                            <h4 class="pull-right">now {{ product.price*(1-(product.discount/100)) | number: 2  }}€</h4>
+                            <h4 class="price-review">{{product.price}}€</h4>
+                            <h5 id="name"> {{ product.name }}</h5>
+                            <p>Expery at: {{ product.experyAt | date : shortDate }}</p>
+                            <h5 id="shopName">{{ product.shop.name}}</h5>
+                            <p>{{ product.shop.address }}</p>
+                            <!-- <p><a class="btn btn-danger" role="button" ng-click="removeProduct(product._id)">Remove</a></p> -->
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

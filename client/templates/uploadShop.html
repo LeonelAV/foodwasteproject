@@ -3,35 +3,21 @@
         <div class="panel-group">
             <div class="panel panel-default">
                 <div class="panel-heading">Upload a Shop</div>
-                <!--      user location  -->
-                <!-- <p>
-                    <button ng-click="geoFindMe()">Show my location</button>
-                    <button ng-click="seeDistance(); getCoordenates(); geoFindMe()">Distance between</button>
-                </p>
-                <p>{{userLatitude}}</p>
-                <p>{{userLongitude}}</p>
-                <div id="demo"></div> -->
-                <!--    user location end -->
                 <div class="panel-body">
                     <form role="form" id="registForm">
-                        <!-- <input type="hidden" name="contentCount" value="1" /> -->
                         <div class="form-group">
                             <label for="shopName">Shop Name</label>
                             <input ng-model="name" name="shopName" type="text" class="form-control" id="input-code">
                         </div>
                         <div class="form-group">
                             <label for="shopCategory">Shop Category</label>
-                            <!--  <input ng-model="category" name="shopCategory" type="text" class="form-control" id="input-code"> -->
                             <select class="input" ng-model="category">
                                 <option name="shopAddress">supermaket</option>
                                 <option name="shopAddress">fishShop</option>
                                 <option name="shopAddress">bakery</option>
-                                <option name="shopAddress">Fruit And Vegetables</option>
                                 <option name="shopAddress">butchery</option>
                             </select>
                         </div>
-                        <!-- City:<input type="text" name="cityname" ng-model="trader.cityname"   googleplace="" > -->
-                         
                         <div class="row">
                             <div class="col-md-9 form-group">
                                 <label for="shopAddress">Address</label>
@@ -39,47 +25,26 @@
                                 <p>{{info}}</p>
                             </div>
                             <!--  Get the coordenates -->
-                            <div class=" form-group">
+                            <div class="hidden form-group">
                                 <label for="shopCord">Address</label>
-                                <input ng-model="address" name="shopCord" type="text" class="form-control" id="input-code" >
-                                <input ng-value="{{ lat }}" ng-model="lat" required>
-                                <input ng-value="{{ lng }}" ng-model="lng" required>
+                                <input ng-model="address" name="shopCord" type="text" class="hidden form-control" id="input-code" required>
+                                <input ng-value="{{ lat }}" ng-model="lat">
+                                <input ng-value="{{ lng }}" ng-model="lng">
                             </div>
                             <div class="col-md-3">
-                                <p><button class="valid-btn btn" role="button" ng-click="getCoordenates()">Validate Your address</button></p>
+                                <p>
+                                    <button class="valid-btn btn" role="button" ng-click="getCoordenates()">Validate Your address</button>
+                                </p>
                             </div>
-                            
                         </div>
-                        <div class="form-group">
+                        <div class="hidden form-group">
                             <label for="imageShop">Image URL</label>
                             <input ng-model="imageShop" name="imageShop" type="text" class="form-control" id="input-code">
                         </div>
-                        <!--                             <div class="form-group">
-                                <label for="imageProduct">Image of the product</label>
-                                <input ng-model="image" name="imageProduct" type="file" id="exampleInputFile">
-                                <p class="help-block">.jpg, .gif, .png</p>
-                            </div> -->
                         <button ng-click="addShop()" type="submit" class="btn btn-default">Submit</button>
                     </form>
-
                 </div>
-                <!-- END panel-body -->
-
             </div>
         </div>
     </div>
 </div>
-<!-- <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Basic Usage</h1>
-
-            <form class="form">
-                <input class="form-control" g-places-autocomplete ng-model="place"/>
-            </form>
-
-            <h5>Result:</h5>
-            <pre>{{place | json }}</pre>
-        </div>
-    </div>
-</div> -->
