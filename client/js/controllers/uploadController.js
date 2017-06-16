@@ -21,6 +21,7 @@ angular.module('zeroWasteApp')
                     toastr.success('check your list', 'Product Created!')
                 })
             allProductsToScope()
+            $location.path('/products/')
         }
 
 
