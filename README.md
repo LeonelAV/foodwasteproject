@@ -64,8 +64,8 @@ The server part has four end points.
 ## Authors
 [Leonel Meirinho](https://github.com/LeonelAV)
 
-## Authors
-[Juanma](https://github.com/juanmaguitar)
-[Alex](https://github.com/agandia9)
-[SkyLabCoders](https://github.com/skylabcoders)
+## Acknowledgments
+- [Juanma](https://github.com/juanmaguitar)
+- [Alex](https://github.com/agandia9)
+- [SkyLabCoders](https://github.com/skylabcoders)
 
