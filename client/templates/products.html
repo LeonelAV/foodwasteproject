@@ -11,18 +11,9 @@
             <a type="button" ng-model="supermaket" ng-click="showQuery()" class="list-group-item">Supermaket</a>
             <a type="button" ng-model="fishShop" ng-click="showFishShop()" class="list-group-item">Fish Shops</a>
             <a type="button" ng-model="bakery" ng-click="showBakery()" class="list-group-item">Bakery</a>
-            <a type="button" ng-model="Fruit" ng-click="showFruit()" class="list-group-item">Fruit & vegetables</a>
             <a type="button" ng-model="butchery" ng-click="showButchery()" class="list-group-item">Butchery</a>
             <a type="button" ng-model="showAll" ng-click="showAll()" class="list-group-item">See All Categories</a>
         </div>
-        <!-- <p class="lead1">Distance</p>
-        <select class="distance-select">
-            <option>+ 1 km</option>
-            <option>+ 2 km</option>
-            <option>+ 3 km</option>
-            <option>+ 5 km</option>
-            <option>+ 10 km</option>
-        </select> -->
     </div>
     <div class="col-md-9">
         <p class="result-input">Searching for: {{query}}</p>
@@ -34,7 +25,7 @@
                         <img class="discount" src="img/plaindiscount.png"></img>
                         <div class="container-image">
                             <div class="img-bg" ng-style="{'background-image':'url({{product.image}})'}" ng-alt="{{ product.name }}">
-                                <div class="cover-hover">
+                               <div class="cover-hover">
                                     <p><a data-toggle="modal"  data-target="#modalProduct_{{ product._id }}"><i class="glyphicon glyphicon-zoom-in" ng-click="getProductsFromId(product.shop._id)"></i></a></p>
                                 </div>
                             </div>

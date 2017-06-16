@@ -10,7 +10,7 @@ angular.module('zeroWasteApp')
 
         ApiService.getProducts()
             .then(function(response) {
-                $rootScope.allProducts = response
+                $rootScope.allProducts = responses
             })
 
 

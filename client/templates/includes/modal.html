@@ -3,7 +3,7 @@
         <div class="modal-content details-modal">
             <h4>{{ product.shop.name}}</h4>
             <p>{{ product.shop.address }}</p>
-            <a id="modal-link" type="button" ng-model="shopID" ng-click="getShop()" data-dismiss="modal" class="list-group-item" value="{{product.shop._id}}">All products of {{ product.shop.name}}</a>
+           <a id="modal-link" type="button" ng-model="shopID" ng-click="getShop()" data-dismiss="modal" class="list-group-item" value="{{product.shop._id}}">All products of {{ product.shop.name}}</a>
             <!-- <img src="img/mapa.png"> -->
             <div id="map">
                 <ng-map id="main-map" center="[{{ product.shop.lat }}, {{ product.shop.lng }}]" zoom="18">
