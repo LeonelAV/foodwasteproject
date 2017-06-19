@@ -893,8 +893,8 @@ select {
   display: flex;
   flex-wrap: wrap; }
   #products .list-products li {
-    width: 233px;
-    margin-right: 20px; }
+    width: 300px;
+    margin-right: 10px; }
     #products .list-products li .thumbnail {
       height: 400px; }
       #products .list-products li .thumbnail .container-image {
